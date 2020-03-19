@@ -4,3 +4,10 @@ dist
 .temp
 .cache
 .DS_Store
+.idea/.gitignore
+.idea/gridsome_nnamm.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/dictionaries/

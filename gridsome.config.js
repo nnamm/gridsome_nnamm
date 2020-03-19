@@ -23,7 +23,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/pages/posts/**/**/*.md',
+        path: 'static/posts/**/**/*.md',
         typeName: 'Post',
         remark: {
           plugins: ['@gridsome/remark-prismjs']
@@ -69,10 +69,6 @@ module.exports = {
           '/about': {
             changefreq: 'monthly',
             priority: 0.7
-          },
-          '/term': {
-            changefreq: 'monthly',
-            priority: 0.7
           }
         }
       }
@@ -84,6 +80,11 @@ module.exports = {
       {
         path: '/posts/:slug',
         component: './src/templates/Post.vue'
+      },
+      {
+        name: 'photo',
+        path: '/photos/:slug',
+        component: './src/templates/Photo.vue'
       }
     ]
   }
