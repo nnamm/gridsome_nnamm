@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen mx-auto text">
     <div class="px-6 py-16 sm:px-8 sm:py-20 lg:px-15 lg:py-32 xl:px-20">
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
         <!-- 記事 -->
         <div v-for="{ node } in $static.allPost.edges" :key="node.id"
           class="px-4 py-6 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
@@ -38,7 +38,7 @@
 
 <static-query>
 query ($page: Int) {
-  allPost (page: $page) {
+  allPost (perPage: 10, page: $page, filter: { type: { eq: "blog" }}) {
     edges {
       node {
         id

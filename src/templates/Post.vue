@@ -36,6 +36,7 @@
         <div class="pt-8 text-sm text-center text-gray-600">
           <span v-for="tag in $page.post.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />
         </div>
+        <!--  TODO: "and more..." ボタンを作る  -->
       </div>
     </template>
 
@@ -63,7 +64,7 @@ export default {
     }
   },
   computed: {
-    tags () {
+    tags: () => {
       return this.$page.post.tags.split(' ');
     }
   }
@@ -89,18 +90,12 @@ query Post ($path: String!) {
 <style>
 /* 見出し */
 .blog-content > h2 {
-  @apply text-2xl;
-  @apply font-bold;
-  @apply leading-loose;
-  @apply pt-8;
+  @apply text-2xl font-bold leading-loose pt-8;
   padding-bottom: calc(1px + 0.1em);
-  border-bottom: calc(0.5px + 0.02em) solid #CBD5E0;
+  border-bottom: calc(1px + 0.02em) solid #CBD5E0;
 }
 .blog-content > h3 {
-  @apply text-lg;
-  @apply font-bold;
-  @apply leading-loose;
-  @apply pt-4;
+  @apply text-lg font-bold leading-loose pt-4;
 }
 .blog-content > h3::before {
     content: "";
@@ -115,52 +110,39 @@ query Post ($path: String!) {
 
 /* テキスト */
 .blog-content > p {
-  @apply py-4;
   font-size: .98rem;
+  @apply py-4;
 }
 .blog-content > p > a:link, a:visited {
   @apply underline;
 }
 .blog-content > p > a::after {
   content: url('/svg/new-window.svg');
-  display: inline-block;
-  vertical-align: middle;
-  @apply w-6;
-  @apply h-6;
+  @apply w-6 h-6 inline-block align-middle;
 }
 
 /* リスト */
 .blog-content > ul, ol {
-  @apply ml-3;
-  @apply py-2;
+  @apply ml-3 py-2;
 }
 .blog-content > ul > li {
-  @apply list-disc;
-  @apply list-inside;
+  @apply list-disc list-inside;
 }
 .blog-content > ol > li {
-  @apply list-decimal;
-  @apply list-inside;
+  @apply list-decimal list-inside;
 }
 
 /* 抜粋 */
 .blog-content > blockquote {
-  @apply m-6;
-  @apply p-8;
-  @apply text-sm;
-  @apply text-gray-700;
-  @apply bg-gray-200;
-  @apply rounded;
+  @apply m-6 p-8 text-sm text-gray-700 bg-gray-200 rounded;
 }
 
 /* コードハイライト（Prism.jsベース） */
 .blog-content > pre {
-  @apply my-6;
-  @apply p-6;
-  @apply leading-snug;
+  @apply my-6 p-6 leading-snug;
 }
 .blog-content > pre > code {
-  font-family: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"!important;
-  font-size: 0.8rem;
+  font-family: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+  font-size: 0.9rem;
 }
 </style>

@@ -77,10 +77,12 @@ module.exports = {
 
   templates: {
     Post: [
+      // ブログ記事用
       {
         path: '/posts/:slug',
         component: './src/templates/Post.vue'
       },
+      // 写真作品用
       {
         name: 'photo',
         path: '/photos/:slug',
