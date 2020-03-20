@@ -70,6 +70,7 @@
       <div class="row-span-1 col-span-1">
         <div class="square hover-num-parent">
           <div class="hover-num-child hover:opacity-50">
+            <!-- TODO: 作品数が9を超えたらアーカイブページに飛ぶようにする -->
             <p class="text-gray-400 text-4xl">+{{ remainingCount }}</p>
           </div>
         </div>
