@@ -1,7 +1,7 @@
 <template>
   <!-- コンテンツ部 -->
   <div class="container mx-auto px-8 py-16 sm:px-12 sm:py-20 lg:px-32 lg:py-40">
-    <div class="grid grid-cols-2 gap-6 md:gap-8 lg:grid-rows-4 lg:grid-cols-4 grid-flow-row">
+    <div class="grid grid-cols-2 gap-6 lg:grid-rows-4 lg:grid-cols-4 grid-flow-row">
       <!-- 1st:大きいサイズ -->
       <div class="row-span-1 col-span-1 lg:row-span-2 lg:col-span-2">
         <div class="square hover-parent">
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <!--  TODO: "and more..." ボタンを作る  -->
+    <!--  TODO: "+10のようなand more" ボタンを作る  -->
   </div>
 </template>
 

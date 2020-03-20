@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen lg:w-auto flex justify-between items-center bg-white shadow rounded-br-full">
     <div class="m-2 px-4 py-2 lg:py-4">
-      <g-link class="text-xl font-bold text-gray-800" to="/">{{ $static.metadata.siteName }}</g-link>
+      <g-link class="text-xl font-bold text-gray-800 tracking-wider" to="/">{{ $static.metadata.siteName }}</g-link>
     </div>
     <div class="m-2 px-4 py-2 lg:py-4">
       <!-- not mobile -->

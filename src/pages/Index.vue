@@ -13,10 +13,10 @@
     <template v-slot:main-contents>
       <ContentsSeparator contents-title="Photography" tilt-mode="left" />
       <ContentsTopPhoto />
-      <ContentsSeparator contents-title="Graphics" tilt-mode="right" />
-      <ContentsTopPhoto /> <!-- 仮のコンポーネント指定 -->
-      <ContentsSeparator contents-title="Material" tilt-mode="left" />
-      <ContentsTopMaterial />
+<!--      <ContentsSeparator contents-title="Graphics" tilt-mode="right" />-->
+<!--      <ContentsTopPhoto />-->
+<!--      <ContentsSeparator contents-title="Material" tilt-mode="left" />-->
+<!--      <ContentsTopMaterial />-->
       <ContentsSeparator contents-title="Blog" tilt-mode="right" />
       <ContentsTopBlog />
     </template>
