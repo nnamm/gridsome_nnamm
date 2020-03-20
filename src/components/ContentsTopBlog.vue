@@ -7,7 +7,7 @@
           class="px-4 pt-6 pb-8 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
           <router-link :to="node.path">
             <!-- カテゴリ -->
-            <div class="text-sm text-center text-gray-600">{{ node.category }}</div>
+            <div class="text-sm text-center text-gray-600 tracking-wider">{{ node.category }}</div>
             <!-- タイトル -->
             <h2 class="pt-6 text-xl font-bold text-center">{{ node.title }}</h2>
             <!-- 投稿日 -->

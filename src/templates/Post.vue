@@ -18,8 +18,8 @@
           </span>
         </div>
         <!-- カテゴリ -->
-        <div class="flex items-center justify-center pt-2 pb-4">
-          <div class="text-sm text-white bg-gray-600 rounded-full border border-gray-600 px-3 py-1">
+        <div class="flex items-center justify-center pt-3 pb-4">
+          <div class="text-sm tracking-wider text-white bg-gray-600 rounded-full border border-gray-600 px-3 py-1">
             {{ $page.article.category }}
           </div>
         </div>

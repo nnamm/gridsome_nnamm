@@ -13,10 +13,10 @@
       </div>
       <div class="row-span-1 col-span-1">
         <div class="square hover-parent">
-<!--          <router-link :to="postWorkEdges[1].node.path">-->
-<!--            <g-image :src="postWorkEdges[1].node.image" width="300"-->
-<!--                     class="hover-child hover:opacity-50" />-->
-<!--          </router-link>-->
+          <router-link :to="postWorkEdges[1].node.path">
+            <g-image :src="postWorkEdges[1].node.image" width="300"
+                     class="hover-child hover:opacity-50" />
+          </router-link>
         </div>
       </div>
       <div class="row-span-1 col-span-1">
@@ -71,7 +71,7 @@
         <div class="square hover-num-parent">
           <div class="hover-num-child hover:opacity-50">
             <!-- TODO: 作品数が9を超えたらアーカイブページに飛ぶようにする -->
-            <p class="text-gray-400 text-4xl">+{{ remainingCount }}</p>
+            <p class="text-gray-400 text-4xl">{{ remainingCount }}</p>
           </div>
         </div>
       </div>
@@ -92,12 +92,12 @@ export default {
     // 作品掲載データ
     postWorkEdges: function () {
       // return this.$static.photos.edges(0, this.workCount)
-      return this.$static.photos.edges.slice(0, 1)
+      return this.$static.photos.edges.slice(0, 2)
     },
     // トップページ掲載数を除いた作品数
     remainingCount: function () {
       // return this.workCount - this.$static.photos.edges.length
-      return 0
+      return '---'
     }
   }
 }
