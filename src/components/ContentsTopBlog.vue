@@ -1,10 +1,10 @@
 <template>
   <div class="w-screen mx-auto text">
-    <div class="px-6 py-16 sm:px-8 sm:py-20 lg:px-15 lg:py-32 xl:px-20">
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+    <div class="my-16 lg:my-32 px-6 py-16 sm:px-8 sm:py-20 lg:px-15 xl:px-20">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
         <!-- 記事 -->
-        <div v-for="{ node } in $static.allPost.edges" :key="node.id"
-          class="px-4 py-6 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
+        <div v-for="{ node } in $static.blogs.edges" :key="node.id"
+          class="px-4 pt-6 pb-8 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
           <router-link :to="node.path">
             <!-- カテゴリ -->
             <div class="text-sm text-center text-gray-600">{{ node.category }}</div>
@@ -38,7 +38,7 @@
 
 <static-query>
 query ($page: Int) {
-  allPost (perPage: 10, page: $page, filter: { type: { eq: "blog" }}) {
+  blogs: allPost (perPage: 10, page: $page, filter: { type: { eq: "blog" }}) {
     edges {
       node {
         id

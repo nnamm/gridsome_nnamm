@@ -1,9 +1,9 @@
 <template>
   <!-- ななめ背景部 -->
-  <div class="bg-gray-200 h-40 hoverflow-hidden">
-    <div :class="tiltClass + '-parent'">
-      <div :class="tiltClass + '-child'" class="text-center pt-16 lg:pt-12">
-        <h2 class="separator-title">{{ contentsTitle }}</h2>
+  <div class="bg-gray-200 h-40 lg:h-56 hoverflow-hidden">
+    <div :class="tiltClass + '-parent'" class="h-40 lg:h-56">
+      <div :class="tiltClass + '-child'" class="h-40 lg:h-56 text-center pt-12 lg:pt-16">
+        <h2 class="separator-title text-sm lg:text-base">{{ contentsTitle }}</h2>
       </div>
     </div>
   </div>
@@ -16,10 +16,10 @@ export default {
     tiltMode: String        // left:左下がり、right:右下がり、左記以外:
  },
  computed: {
-    tiltClass: (e) => {
-      if (e.tiltMode === 'left') {
+    tiltClass: function () {
+      if (this.tiltMode === 'left') {
         return 'tilt-mode1'
-      } else if (e.tiltMode === 'right') {
+      } else if (this.tiltMode === 'right') {
         return 'tilt-mode2'
       } else {
         return 'tilt-mode1'
@@ -31,7 +31,7 @@ export default {
 
 <style>
 .tilt-mode1-parent {
-  @apply bg-gray-200 h-40 transform origin-top-right -skew-y-3;
+  @apply bg-gray-200 transform origin-top-right -skew-y-3;
 }
 
 .tilt-mode1-child {
@@ -39,7 +39,7 @@ export default {
 }
 
 .tilt-mode2-parent {
-  @apply bg-gray-200 h-40 transform origin-top-left skew-y-3;
+  @apply bg-gray-200 transform origin-top-left skew-y-3;
 }
 
 .tilt-mode2-child {
@@ -48,7 +48,7 @@ export default {
 
 .separator-title {
   @apply relative inline-block py-0 px-20;
-  @apply text-gray-600 text-sm tracking-widest font-light;
+  @apply text-gray-600 tracking-widest;
 }
 
 .separator-title::before, .separator-title::after {

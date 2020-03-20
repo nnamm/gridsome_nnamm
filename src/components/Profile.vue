@@ -1,29 +1,28 @@
 <template>
-  <div class="my-0 sm:my-20">
-    <!-- sm時に上下幅＝余白を調整 -->
-    <div class="container mx-auto bg-white lg:my-32 px-8 py-20 sm:py-4 lg:flex lg:w-3/5 lg:p-10 lg:border lg:border-gray-300 lg:rounded-lg">
-      <!-- プロフィール -->
-      <img :src="profile.img" class="w-48 h-48 mx-auto my-4 rounded-full lg:my-auto lg:mr-10">
-      <div class="my-4">
-        <p class="text-pink-500 text-sm text-center pb-4">
-          {{ profile.title }}
-        </p>
-        <p class="text-gray-800 text-2xl text-center font-medium py-3">
-          {{ profile.nameJa }}<span class="text-base">{{ profile.nickname }}</span>
-        </p>
-        <p class="text-gray-800 text-xs text-center py-1">
-          {{ profile.nameEn }}
-        </p>
-        <p class="text-gray-800 text-left px-4 lg:px-0 py-6 leading-loose" style="font-size: .96rem">
-          {{ profile.intro.t1 }}{{ profile.intro.t2 }}<br>{{ profile.intro.t3 }}{{ $static.metadata.siteName }}{{ profile.intro.t4 }}
-        </p>
-        <!-- Social -->
-        <div class="flex flex-wrap justify-center text-center pt-2 px-4 lg:px-0">
-          <a v-for="s in social" :key="s.text" :href="s.link" target="_blank"
-            class="mr-2 mb-2 px-2 py-1 text-xs bg-gray-200 rounded-full">
-            <img :src="s.icon" class="w-4 h-4 mr-1 inline-block" style="vertical-align: -0.2rem" /><span>{{ s.text }}</span>
-          </a>
-        </div>
+  <div class="container mx-auto my-0 sm:my-20 px-8 py-20 sm:py-4 bg-white
+              lg:flex lg:w-3/5 lg:my-40 lg:px-10 lg:py-8
+              lg:border lg:border-gray-300 lg:rounded-lg">
+    <img :src="profile.img" :alt="profile.desc"
+         class="w-48 h-48 mx-auto my-4 rounded-full lg:my-auto lg:mr-10">
+    <div class="lg:mx-4 my-4">
+      <p class="text-pink-500 text-sm text-center pb-4">
+        {{ profile.title }}
+      </p>
+      <p class="text-gray-800 text-2xl text-center font-medium py-3">
+        {{ profile.nameJa }}<span class="text-base">{{ profile.nickname }}</span>
+      </p>
+      <p class="text-gray-800 text-xs text-center py-1">
+        {{ profile.nameEn }}
+      </p>
+      <p class="text-gray-800 text-left px-2 lg:px-0 py-6 leading-loose" style="font-size: .96rem">
+        {{ profile.intro.t1 }}{{ profile.intro.t2 }}<br>{{ profile.intro.t3 }}{{ $static.metadata.siteName }}{{ profile.intro.t4 }}
+      </p>
+      <!-- Social -->
+      <div class="flex flex-wrap justify-center text-center pt-2 px-4 lg:px-0">
+        <a v-for="s in social" :key="s.text" :href="s.link" target="_blank"
+          class="mr-2 mb-2 px-2 py-1 text-xs bg-gray-200 rounded-full">
+          <img :src="s.icon" class="w-4 h-4 mr-1 inline-block" style="vertical-align: -0.2rem" /><span>{{ s.text }}</span>
+        </a>
       </div>
     </div>
   </div>
@@ -45,7 +44,8 @@ export default {
           t2: '横浜育ち38年、脱サラ信州移住2年半を経て、2018年春から関西在住。翌年秋から夫婦生活スタート。関西に来てよかったことは京都が近くなったこと、めっちゃ嬉しい。',
           t3: 'そんな僕のポートフォリオサイト「',
           t4: '」をよろしくお願いします。'
-        }
+        },
+        desc: '運営者近影'
       },
       social: [
         {

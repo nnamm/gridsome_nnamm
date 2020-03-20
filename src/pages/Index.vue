@@ -29,7 +29,7 @@ import Profile from '~/components/Profile.vue'
 import ContentsSeparator from '~/components/ContentsSeparator.vue'
 import ContentsTopPhoto from '~/components/ContentsTopPhoto.vue'
 // import ContentsTopGraphic from '~/components/ContentsTopGraphic.vue'
-import ContentsTopMaterial from '~/components/ContentsTopMaterial.vue'
+// import ContentsTopMaterial from '~/components/ContentsTopMaterial.vue'
 import ContentsTopBlog from '~/components/ContentsTopBlog.vue'
 
 export default {
@@ -39,7 +39,7 @@ export default {
     ContentsSeparator,
     ContentsTopPhoto,
     // ContentsTopGraphic,
-    ContentsTopMaterial,
+    // ContentsTopMaterial,
     ContentsTopBlog
   },
   metaInfo: {
