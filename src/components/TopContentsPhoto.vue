@@ -1,8 +1,8 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="container mx-auto my-16 lg:my-32 px-8 py-16 sm:px-12 sm:py-20 lg:px-24">
+  <div class="container mx-auto my-8 lg:my-32 px-8 py-16 sm:px-12 sm:py-20 lg:px-24">
     <!-- メイン -->
-    <div class="grid grid-cols-2 gap-4 lg:grid-rows-3 lg:grid-cols-4 grid-flow-row">
+    <div class="grid grid-cols-2 gap-6 lg:grid-rows-3 lg:grid-cols-4 grid-flow-row">
       <div class="row-span-1 col-span-1 lg:row-span-2 lg:col-span-2">
         <div class="square hover-parent">
           <router-link :to="postWorkEdges[0].node.path">
@@ -83,8 +83,7 @@
 export default {
   data: function () {
     return {
-      workCount: 8,  // トップページに作品を掲載する数
-      noimg: require('@/assets/images/not_published.png')
+      workCount: 8  // トップページに作品を掲載する数
     }
   },
   computed: {
@@ -116,6 +115,7 @@ query ($page: Int) {
         description
         image
         category
+        tags
         type
       }
     }

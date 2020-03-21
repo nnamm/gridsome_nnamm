@@ -1,8 +1,8 @@
 <template>
   <!-- ななめ背景部 -->
-  <div class="bg-gray-200 h-40 lg:h-56 hoverflow-hidden">
-    <div :class="tiltClass + '-parent'" class="h-40 lg:h-56">
-      <div :class="tiltClass + '-child'" class="h-40 lg:h-56 text-center pt-12 lg:pt-16">
+  <div class="bg-gray-200 h-48 lg:h-64 hoverflow-hidden">
+    <div :class="tiltClass + '-parent'" class="h-48 lg:h-64">
+      <div :class="tiltClass + '-child'" class="h-48 lg:h-64 text-center pt-16 lg:pt-20">
         <h2 class="separator-title text-sm lg:text-base">{{ contentsTitle }}</h2>
       </div>
     </div>

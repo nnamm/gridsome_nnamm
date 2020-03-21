@@ -2,16 +2,108 @@ $main-background: #f8f8f8;
 $font-sans: "YuKyo-Medium", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, "Helvetica Neue", Arial, sans-serif;
 $font-mono: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 
+// サイト全体設定
 body {
   font-family: $font-sans;
   background-color: $main-background;
   min-width: 320px;
 }
 
+// フォント設定
 .nam__sans {
   font-family: $font-mono;
 }
-
 .nam__mono {
   font-family: $font-mono;
+}
+
+// Photo用md, Graphic用mdのための設定
+// Buildするとtailwindcssが当たらない（ことがある）ため独自にクラスを作る
+// トップマージン
+.nam__wc-margin-top {
+  margin-top: .5rem;
+}
+.nam__wc-margin-top1 {
+  margin-top: 1rem;
+}
+.nam__wc-margin-top2 {
+  margin-top: 2rem ;
+}
+.nam__wc-margin-top4 {
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .nam__wc-margin-top1 {
+    margin-top: 2rem;
+  }
+  .nam__wc-margin-top2 {
+    margin-top: 4rem;
+  }
+  .nam__wc-margin-top4 {
+    margin-top: 8rem;
+  }
+}
+
+// 1枚の横写真を中央縮小配置
+.nam__wc-1in1-x-center {
+  padding: 0 3rem;
+}
+@media (min-width: 640px) {
+  .nam__wc-1in1-x-center {
+    padding: 0 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .nam__wc-1in1-x-center {
+    padding: 0 6rem;
+  }
+}
+
+// 1枚の縦写真を中央縮小配置
+.nam__wc-1in1-y-center {
+  height: 24rem;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 640px) {
+  .nam__wc-1in1-y-center {
+    height: 36rem;
+  }
+}
+@media (min-width: 768px) {
+  .nam__wc-1in1-y-center {
+    height: 60rem;
+  }
+}
+
+// 2枚の写真を中央寄せ（要style:inline-block指定）
+.nam__wc-2in1-center {
+  text-align: center;
+}
+
+// w-4/5を左寄せ
+.nam__wc-left-align-4d5 {
+  width: 80%;
+  margin-left: 0;
+  margin-right: auto;
+}
+// w-4/5を右寄せ
+.nam__wc-right-align-4d5 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+// w-3/5を左寄せ
+.nam__wc-left-align-3d5 {
+  width: 60%;
+  margin-left: 0;
+  margin-right: auto;
+}
+// w-3/5を右寄せ
+.nam__wc-right-align-3d5 {
+  width: 60%;
+  margin-left: auto;
+  margin-right: 0;
 }

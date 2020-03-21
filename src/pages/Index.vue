@@ -11,14 +11,12 @@
     </template>
 
     <template v-slot:main-contents>
-      <ContentsSeparator contents-title="Photography" tilt-mode="left" />
-      <ContentsTopPhoto />
-<!--      <ContentsSeparator contents-title="Graphics" tilt-mode="right" />-->
-<!--      <ContentsTopPhoto />-->
-<!--      <ContentsSeparator contents-title="Material" tilt-mode="left" />-->
-<!--      <ContentsTopMaterial />-->
-      <ContentsSeparator contents-title="Blog" tilt-mode="right" />
-      <ContentsTopBlog />
+      <SeparatorR contents-title="Photography" />
+      <TopPhoto />
+      <SeparatorL contents-title="Graphics" />
+      <TopGraphic />
+      <SeparatorR contents-title="Blog" />
+      <TopBlog />
     </template>
   </Layout>
 </template>
@@ -26,21 +24,23 @@
 <script>
 import NavMenu from '~/components/TheNavMenu.vue'
 import Profile from '~/components/Profile.vue'
-import ContentsSeparator from '~/components/ContentsSeparator.vue'
-import ContentsTopPhoto from '~/components/ContentsTopPhoto.vue'
-// import ContentsTopGraphic from '~/components/ContentsTopGraphic.vue'
-// import ContentsTopMaterial from '~/components/ContentsTopMaterial.vue'
-import ContentsTopBlog from '~/components/ContentsTopBlog.vue'
+import TopBlog from '~/components/TopContentsBlog.vue'
+import TopGraphic from '~/components/TopContentsGraphic.vue'
+// import TopMaterial from '~/components/TopContentsMaterial.vue'
+import TopPhoto from '~/components/TopContentsPhoto.vue'
+import SeparatorL from '~/components/TopSeparatorLeft.vue'
+import SeparatorR from '~/components/TopSeparatorRight.vue'
 
 export default {
   components: {
     NavMenu,
     Profile,
-    ContentsSeparator,
-    ContentsTopPhoto,
-    // ContentsTopGraphic,
+    SeparatorL,
+    SeparatorR,
+    TopBlog,
+    TopGraphic,
     // ContentsTopMaterial,
-    ContentsTopBlog
+    TopPhoto
   },
   metaInfo: {
     title: 'Home'

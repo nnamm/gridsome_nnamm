@@ -87,6 +87,12 @@ module.exports = {
         name: 'photo',
         path: '/photos/:slug',
         component: './src/templates/Photo.vue'
+      },
+      // グラフィック作品用
+      {
+        name: 'graphic',
+        path: '/graphics/:slug',
+        component: './src/templates/Graphic.vue'
       }
     ]
   }

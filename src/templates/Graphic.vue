@@ -22,7 +22,7 @@
           <g-image :src="$page.article.image" class="rounded-tl-lg rounded-bl-lg opacity-50" />
         </div>
         <!-- 本文 -->
-        <div class="photo-content" v-html="$page.article.content" />
+        <div class="graphic-content" v-html="$page.article.content" />
       </div>
     </template>
 
@@ -68,7 +68,7 @@ query Post ($path: String!) {
 
 <style>
 /* テキスト */
-.photo-content {
+.graphic-content {
   @apply w-full m-0;
   font-size: .9rem;
 }
