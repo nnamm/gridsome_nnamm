@@ -20,7 +20,7 @@ export default {
     Profile,
   },
   metaInfo: {
-    title: 'About'
+    title: 'About Me'
   }
 }
 </script>

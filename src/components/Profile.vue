@@ -78,6 +78,11 @@ export default {
           icon: require('@/assets/svg/line/behance.svg'),
           text: 'Behance'
         },
+        {
+          link: 'https://www.youtube.com/channel/UCvXy78MlFBKnNDMcSrqnOnA',
+          icon: require('@/assets/svg/line/youtube.svg'),
+          text: 'YouTube'
+        },
       ]
     }
   }
