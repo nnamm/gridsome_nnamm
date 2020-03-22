@@ -59,6 +59,11 @@ export default {
           text: 'note'
         },
         {
+          link: 'https://thanamura.work',
+          icon: require('@/assets/svg/line/safari.svg'),
+          text: '100 Web-challenge'
+        },
+        {
           link: 'https://www.facebook.com/t.hanamura.photography/',
           icon: require('@/assets/svg/line/facebook.svg'),
           text: 'Facebook'

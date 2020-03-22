@@ -33,7 +33,7 @@
         <div class="px-5 sm:px-8 blog-content" v-html="$page.article.content" />
 
         <!-- タグ -->
-        <div class="pt-8 text-sm text-center text-gray-600">
+        <div class="pt-8 text-sm tracking-wider text-center text-gray-600">
           <span v-for="tag in $page.article.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />
         </div>
       </div>

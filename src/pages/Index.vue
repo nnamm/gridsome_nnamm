@@ -52,14 +52,15 @@ export default {
         require('@/assets/images/top1.jpg'),
         require('@/assets/images/top2.jpg'),
         require('@/assets/images/top3.jpg'),
-        require('@/assets/images/top4.jpg')
+        require('@/assets/images/top4.jpg'),
+        require('@/assets/images/top5.jpg')
       ]
     }
   },
   computed: {
     // サイト読み込みのたびヘッダー画像をランダム選択
     headerImgIndex: () => {
-      return Math.floor(Math.random() * 4)
+      return Math.floor(Math.random() * 5)
     }
   }
 }

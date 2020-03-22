@@ -62,7 +62,15 @@ module.exports = {
         cacheTime: 600000,
         exclude: ['/exclude-me'],
         config: {
-          '/blog/*': {
+          '/posts/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/photos/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/graphics/*': {
             changefreq: 'weekly',
             priority: 0.5
           },

@@ -5,21 +5,25 @@
     </template>
 
     <template v-slot:main-contents>
-      <div class="w-screen mx-auto m-10 pt-10 bg-white lg:w-11/12">
+      <div class="w-screen mx-auto m-10 bg-white lg:w-11/12">
         <!-- タイトル部 -->
-        <div class="relative w-11/12 mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0 rounded-tl-lg rounded-bl-lg">
-          <div class="absolute pl-4 lg:pl-8 z-10" style="top: 20%;">
+        <div class="relative mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0">
+          <div class="absolute w-full z-10" style="top: 30%;">
             <!-- カテゴリ -->
-            <div class="text-md sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-gray-200">
+            <div class="text-md sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-gray-200 text-center">
               {{ $page.article.category }}
             </div>
             <!-- タイトル -->
-            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-200">
+            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-200">
               {{ $page.article.title }}
             </h1>
+            <!-- タグ -->
+<!--            <div class="mt-4 text-sm sm:text-md tracking-wider text-gray-200 text-center">-->
+<!--              <span v-for="tag in $page.article.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />-->
+<!--            </div>-->
           </div>
           <!-- タイトル背景画像 -->
-          <g-image :src="$page.article.image" class="rounded-tl-lg rounded-bl-lg opacity-50" />
+          <g-image :src="$page.article.image" class="opacity-50" />
         </div>
         <!-- 本文 -->
         <div class="graphic-content" v-html="$page.article.content" />
