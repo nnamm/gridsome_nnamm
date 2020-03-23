@@ -41,6 +41,7 @@ export default {
 
 <style scoped>
 .base-text {
+  @apply w-screen;
   @apply text-gray-800;
   @apply leading-relaxed;
   @apply subpixel-antialiased;

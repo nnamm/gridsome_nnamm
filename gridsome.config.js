@@ -57,6 +57,14 @@ module.exports = {
       }
     },
     {
+      use: 'gridsome-plugin-robots',
+      options: {
+        host: 'https://portfolio.nnamm.com',
+        sitemap: 'https://portfolio.nnamm.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000,

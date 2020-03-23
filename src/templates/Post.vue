@@ -89,33 +89,23 @@ query Post ($path: String!) {
 <style>
 /* 見出し */
 .blog-content > h2 {
-  @apply text-2xl font-bold leading-relaxed mt-12;
-  padding-bottom: calc(1px + 0.1em);
-  border-bottom: calc(1px + 0.02em) solid #CBD5E0;
+  @apply text-2xl font-bold leading-relaxed mt-12 p-1;
+  border-bottom: 1px solid #F687B3;
 }
 .blog-content > h3 {
+  @apply font-bold leading-relaxed mt-10 pl-3 pr-1;
   font-size: 1.1rem;
-  @apply font-bold leading-relaxed mt-10;
-}
-.blog-content > h3::before {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: calc(-0.2 * 1em);
-    vertical-align: middle;
-    height: calc(12px + 1em);
-    margin-right: calc(5px + 0.2em);
-    border-left: calc(4px + 0.1em) solid #CBD5E0;
+  border-left: 4px solid #F687B3;
 }
 
 /* テキスト */
 .blog-content > p {
+  @apply my-8 pb-1;
   font-size: .97rem;
-  @apply my-8 leading-relaxed;
 }
-/*.blog-content > p > a:link, a:visited {*/
-/*  @apply underline;*/
-/*}*/
+.blog-content > p > a:link, a:visited {
+  @apply underline;
+}
 .blog-content > p > a::after {
   content: url('/svg/new-window.svg');
   @apply w-6 h-6 inline-block align-middle;
@@ -123,13 +113,27 @@ query Post ($path: String!) {
 
 /* リスト */
 .blog-content > ul, ol {
-  @apply ml-3 py-2;
+  @apply px-6;
 }
-.blog-content > ul > li {
-  @apply list-disc list-inside;
+.blog-content > ul li {
+  @apply list-disc list-outside;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+.blog-content > ul > li > ul  {
+  @apply list-disc list-outside pl-6;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  font-size: .96rem;
 }
 .blog-content > ol > li {
-  @apply list-decimal list-inside;
+  @apply list-decimal list-outside;
+}
+.blog-content > ol > li > ol  {
+  @apply list-decimal list-outside pl-6;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  font-size: .96rem;
 }
 
 /* 抜粋 */

@@ -17,6 +17,7 @@ body {
   font-family: $font-mono;
 }
 
+// TODO: SCSS的にスマートに組みたい
 // Photo用md, Graphic用mdのための設定
 // Buildするとtailwindcssが当たらない（ことがある）ため独自にクラスを作る
 // トップマージン

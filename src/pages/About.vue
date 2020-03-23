@@ -5,7 +5,7 @@
     </template>
 
     <template v-slot:main-contents>
-      <Profile />
+      <Profile class="mt-20" /> <!-- TODO: アーカイブページタスクまでの暫定処置 -->
     </template>
   </Layout>
 </template>
