@@ -34,7 +34,8 @@
 
         <!-- タグ -->
         <div class="pt-8 text-sm tracking-wider text-center text-gray-600">
-          <span v-for="tag in $page.article.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />
+          <span v-for="tag in tags" :key="tag" v-text="`#${tag}`" class="mr-2" />
+<!--          <span v-for="tag in $page.article.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />-->
         </div>
       </div>
     </template>
@@ -58,7 +59,13 @@ export default {
     return {
       title: this.$page.article.title,
       meta: [
-        { key: 'description', name: 'description', content: this.$page.article.description }
+        { name: 'description', content: this.$page.article.description },
+        { property: 'og:title', content: this.$page.article.title },
+        { property: 'og:type', content: 'Website' },
+        { property: 'og:url', content: 'https://portfolio.nnamm.com/posts/' + this.$page.article.slug + '/' },
+        { property: 'og:image', content: 'https://portfolio.nnamm.com' + this.$page.article.image },
+        { property: 'og:site_name', content: 'nnamm works' },
+        { property: 'og:description', content: this.$page.article.description }
       ]
     }
   },
@@ -80,6 +87,7 @@ query Post ($path: String!) {
     description
     content
     image
+    slug
     category
     tags
   }
@@ -113,7 +121,7 @@ query Post ($path: String!) {
 
 /* リスト */
 .blog-content > ul, ol {
-  @apply px-6;
+  @apply pl-6 pr-2;
 }
 .blog-content > ul li {
   @apply list-disc list-outside;
