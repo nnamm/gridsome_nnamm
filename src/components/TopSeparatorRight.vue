@@ -27,7 +27,7 @@ export default {
   @apply absolute inline-block bg-gray-600 w-12;
   content: '';
   top: 50%;
-  height: 1px;
+  height: calc(1px + 0.015rem);
 }
 
 .separator-title::before {

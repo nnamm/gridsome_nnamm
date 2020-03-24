@@ -5,7 +5,7 @@
     </template>
 
     <template v-slot:main-contents>
-      <div class="w-screen mx-auto m-10 bg-white lg:w-11/12">
+      <div class="w-full mx-auto m-10 bg-white lg:w-11/12">
         <!-- タイトル部 -->
         <div class="relative w-11/12 mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0 rounded-bl-lg">
           <div class="absolute pl-4 lg:pl-8 z-10" style="top: 20%;">

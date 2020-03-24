@@ -1,6 +1,6 @@
 <template>
   <!-- フッター最下部設置用の設定 -->
-  <div class="min-h-screen relative box-border pb-40 lg:pb-20 base-text">
+  <div class="min-h-full relative box-border pb-40 lg:pb-20 base-text">
 
     <!-- ヘッダー -->
     <header>
@@ -23,7 +23,7 @@
     </div>
 
     <!-- フッター最下部設置用の設定 -->
-    <footer class="w-screen absolute bottom-0">
+    <footer class="w-full absolute bottom-0">
       <Footer />
     </footer>
   </div>
@@ -41,7 +41,6 @@ export default {
 
 <style scoped>
 .base-text {
-  @apply w-screen;
   @apply text-gray-800;
   @apply leading-relaxed;
   @apply subpixel-antialiased;

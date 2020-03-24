@@ -5,7 +5,7 @@
     </template>
 
     <template v-slot:main-contents>
-      <div class="w-screen mx-auto m-10 py-10 bg-white sm:w-9/12 lg:w-7/12">
+      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-9/12 lg:w-7/12">
         <!-- タイトル -->
         <h1 class="p-4 text-3xl font-bold text-center">{{ $page.article.title }}</h1>
         <!-- 投稿日 -->
@@ -109,7 +109,7 @@ query Post ($path: String!) {
 /* テキスト */
 .blog-content > p {
   @apply my-8 pb-1;
-  font-size: .97rem;
+  font-size: .98rem;
 }
 .blog-content > p > a:link, a:visited {
   @apply underline;
@@ -132,7 +132,6 @@ query Post ($path: String!) {
   @apply list-disc list-outside pl-6;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  font-size: .96rem;
 }
 .blog-content > ol > li {
   @apply list-decimal list-outside;
@@ -141,7 +140,6 @@ query Post ($path: String!) {
   @apply list-decimal list-outside pl-6;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  font-size: .96rem;
 }
 
 /* 抜粋 */
