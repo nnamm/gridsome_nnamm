@@ -153,6 +153,6 @@ query Post ($path: String!) {
 }
 .blog-content > pre > code {
   font-family: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 </style>
