@@ -5,9 +5,9 @@
     </template>
 
     <template v-slot:main-contents>
-      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-9/12 lg:w-7/12">
+      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-10/12 lg:w-8/12">
         <!-- タイトル -->
-        <h1 class="p-4 text-3xl font-bold text-center">{{ $page.article.title }}</h1>
+        <h1 class="px-4 sm:px-10 py-4 text-3xl font-bold text-center">{{ $page.article.title }}</h1>
         <!-- 投稿日 -->
         <div class="py-4 text-xs text-center text-gray-600">
           <time :datetime="$page.article.createdAt">{{ $page.article.createdAt }}</time>
@@ -30,7 +30,7 @@
         </div>
 
         <!-- 本文 -->
-        <div class="px-5 sm:px-10 blog-content" v-html="$page.article.content" />
+        <div class="px-5 sm:px-10 lg:px-12 blog-content" v-html="$page.article.content" />
 
         <!-- タグ -->
         <div class="pt-8 text-sm tracking-wider text-center text-gray-600">
