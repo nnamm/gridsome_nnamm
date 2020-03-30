@@ -10,7 +10,7 @@
           <!-- カテゴリ -->
           <div class="text-sm text-center text-gray-600 tracking-wider">{{ node.category }}</div>
           <!-- タイトル -->
-          <h2 class="pt-6 px-4 text-xl font-bold text-center">{{ node.title }}</h2>
+          <h2 class="pt-6 px-4 text-xl text-center">{{ node.title }}</h2>
           <!-- 投稿日 -->
           <div class="pt-5 text-xs text-center text-gray-600">
             <time :datetime="node.createdAt">{{ node.createdAt }}</time>

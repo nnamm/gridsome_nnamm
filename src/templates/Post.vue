@@ -7,7 +7,7 @@
     <template v-slot:main-contents>
       <div class="w-full mx-auto m-10 py-10 bg-white sm:w-10/12 lg:w-8/12">
         <!-- タイトル -->
-        <h1 class="px-4 sm:px-10 py-4 text-3xl font-bold text-center">{{ $page.article.title }}</h1>
+        <h1 class="px-4 sm:px-10 py-4 text-3xl text-center">{{ $page.article.title }}</h1>
         <!-- 投稿日 -->
         <div class="py-4 text-xs text-center text-gray-600">
           <time :datetime="$page.article.createdAt">{{ $page.article.createdAt }}</time>
@@ -97,11 +97,11 @@ query Post ($path: String!) {
 <style>
 /* 見出し */
 .blog-content > h2 {
-  @apply text-2xl font-bold leading-relaxed mt-12 p-1;
+  @apply text-2xl leading-relaxed mt-12 p-1;
   border-bottom: 1px solid #F687B3;
 }
 .blog-content > h3 {
-  @apply font-bold leading-relaxed mt-10 pl-3 pr-1;
+  @apply leading-relaxed mt-10 pl-3 pr-1;
   font-size: 1.1rem;
   border-left: 4px solid #F687B3;
 }
@@ -113,10 +113,13 @@ query Post ($path: String!) {
 }
 .blog-content > p > a:link, a:visited {
   @apply underline;
+  text-underline-position: under;
 }
 .blog-content > p > a::after {
   content: url('/svg/new-window.svg');
   @apply w-6 h-6 inline-block align-middle;
+  margin-left: -.1rem;
+  margin-right: -.2rem;
 }
 
 /* リスト */
