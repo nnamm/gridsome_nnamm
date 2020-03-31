@@ -5,7 +5,7 @@
     </template>
 
     <template v-slot:main-contents>
-      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-10/12 lg:w-8/12">
+      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-9/12 lg:w-7/12">
         <!-- タイトル -->
         <h1 class="px-4 sm:px-10 py-4 text-3xl text-center">{{ $page.article.title }}</h1>
         <!-- 投稿日 -->
@@ -30,7 +30,7 @@
         </div>
 
         <!-- 本文 -->
-        <div class="px-5 sm:px-10 lg:px-12 blog-content" v-html="$page.article.content" />
+        <div class="px-5 sm:px-6 lg:px-8 blog-content" v-html="$page.article.content" />
 
         <!-- タグ -->
         <div class="pt-8 text-sm tracking-wider text-center text-gray-600">
@@ -97,19 +97,18 @@ query Post ($path: String!) {
 <style>
 /* 見出し */
 .blog-content > h2 {
-  @apply text-2xl leading-relaxed mt-12 p-1;
+  @apply text-2xl mt-12 p-1;
   border-bottom: 1px solid #F687B3;
 }
 .blog-content > h3 {
-  @apply leading-relaxed mt-10 pl-3 pr-1;
-  font-size: 1.1rem;
+  @apply mt-10 pl-3 pr-1;
+  font-size: 1.2rem;
   border-left: 4px solid #F687B3;
 }
 
 /* テキスト */
 .blog-content > p {
-  @apply my-8 pb-1;
-  font-size: .98rem;
+  @apply my-8 pb-1 leading-loose;
 }
 .blog-content > p > a:link, a:visited {
   @apply underline;

@@ -60,7 +60,6 @@ query ($page: Int) {
 <style scoped>
 .text {
   @apply text-gray-800;
-  @apply leading-relaxed;
   @apply break-all;
 }
 
