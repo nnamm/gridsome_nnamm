@@ -59,7 +59,7 @@ export default {
           text: 'note'
         },
         {
-          link: 'https://thanamura.work',
+          link: 'https://web-challenge.nnamm.com',
           icon: require('@/assets/svg/line/safari.svg'),
           text: '100 Web-challenge'
         },
