@@ -127,21 +127,23 @@ query Post ($path: String!) {
 }
 .blog-content > ul li {
   @apply list-disc list-outside;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
+  padding-top: .15rem;
+  padding-bottom: .15rem;
 }
 .blog-content > ul > li > ul  {
   @apply list-disc list-outside pl-6;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
+  padding-top: .15rem;
+  padding-bottom: .15rem;
 }
 .blog-content > ol > li {
   @apply list-decimal list-outside;
+  padding-top: .15rem;
+  padding-bottom: .15rem;
 }
 .blog-content > ol > li > ol  {
   @apply list-decimal list-outside pl-6;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
+  padding-top: .15rem;
+  padding-bottom: .15rem;
 }
 
 /* 抜粋 */
