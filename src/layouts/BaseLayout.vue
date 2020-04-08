@@ -33,6 +33,7 @@
 import Footer from '~/components/TheFooter.vue'
 
 export default {
+  name: "BaseLayout",
   components: {
     Footer
   }

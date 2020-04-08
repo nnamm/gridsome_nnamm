@@ -15,6 +15,7 @@ import NavMenu from '~/components/TheNavMenu.vue'
 import Profile from '~/components/Profile.vue'
 
 export default {
+  name: "AboutLayout",
   components: {
     NavMenu,
     Profile,

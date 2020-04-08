@@ -4,6 +4,7 @@
       <div class="relative bg-center bg-no-repeat bg-cover h-screen" :style="{ backgroundImage: 'url(' + headerImgFiles[headerImgIndex] + ')' }">
         <NavMenu class="absolute top-0 left-0" />
       </div>
+      <PageTopButton />
     </template>
 
     <template v-slot:about_top>
@@ -23,6 +24,7 @@
 
 <script>
 import NavMenu from '~/components/TheNavMenu.vue'
+import PageTopButton from '~/components/PageTopButton'
 import Profile from '~/components/Profile.vue'
 import TopBlog from '~/components/TopContentsBlog.vue'
 import TopGraphic from '~/components/TopContentsGraphic.vue'
@@ -32,14 +34,16 @@ import SeparatorL from '~/components/TopSeparatorLeft.vue'
 import SeparatorR from '~/components/TopSeparatorRight.vue'
 
 export default {
+  name: "IndexLayout",
   components: {
     NavMenu,
+    PageTopButton,
     Profile,
     SeparatorL,
     SeparatorR,
     TopBlog,
     TopGraphic,
-    // ContentsTopMaterial,
+    // TopMaterial,
     TopPhoto
   },
   // metaInfo: {

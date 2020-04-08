@@ -33,6 +33,7 @@
 
 <script>
 export default {
+  name: "TopMaterial",
   props: { 'contentsTitle': String },
   data: () => {
     return {

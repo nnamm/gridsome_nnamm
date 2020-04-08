@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: "SeparatorRight",
   props: { 
     contentsTitle: String
   }

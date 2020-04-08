@@ -21,7 +21,7 @@
       <div class="flex flex-wrap justify-center text-center pt-2 px-4 lg:px-0">
         <a v-for="s in social" :key="s.text" :href="s.link" target="_blank"
           class="mr-2 mb-2 px-2 py-1 text-xs bg-gray-200 rounded-full">
-          <img :src="s.icon" class="w-4 h-4 mr-1 inline-block" style="vertical-align: -0.2rem" /><span>{{ s.text }}</span>
+          <img :src="s.icon" :alt="s.text" class="w-4 h-4 mr-1 inline-block" style="vertical-align: -0.2rem" /><span>{{ s.text }}</span>
         </a>
       </div>
     </div>
@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  name: "ProfileItem",
   data: () => {
     return {
       // プロフィール情報

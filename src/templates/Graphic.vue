@@ -2,6 +2,7 @@
   <Layout>
     <template v-slot:header>
       <NavMenu />
+      <PageTopButton />
     </template>
 
     <template v-slot:main-contents>
@@ -38,11 +39,13 @@
 
 <script>
 import NavMenu from '~/components/TheNavMenu.vue'
+import PageTopButton from '~/components/PageTopButton'
 import Profile from '~/components/Profile.vue'
 
 export default {
   components: {
     NavMenu,
+    PageTopButton,
     Profile
   },
   metaInfo: function () {

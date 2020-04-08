@@ -38,6 +38,7 @@
 
 <script>
 export default {
+  name: "NavMenuItem",
   data: () => {
     return {
       // ナビメニュー項目

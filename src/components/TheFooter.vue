@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: "FooterItem",
   data: () => {
     return {
       startYear: 2020  // サイトのスタート年

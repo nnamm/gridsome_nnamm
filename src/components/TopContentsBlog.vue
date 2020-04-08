@@ -36,6 +36,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "TopBlog"
+}
+</script>
+
 <static-query>
 query ($page: Int) {
   blogs: allPost (perPage: 10, page: $page, filter: { type: { eq: "blog" }}) {

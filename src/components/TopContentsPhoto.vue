@@ -81,6 +81,7 @@
 
 <script>
 export default {
+  name: "TopPhoto",
   data: function () {
     return {
       workCount: 8  // トップページに作品を掲載する数
