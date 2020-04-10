@@ -6,11 +6,11 @@
     </template>
 
     <template v-slot:main-contents>
-      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-9/12 lg:w-7/12">
+      <div class="w-full mx-auto m-10 py-10 bg-white sm:w-10/12 md:w-9/12 lg:w-8/12">
         <!-- タイトル -->
-        <h1 class="px-4 lg:px-8 py-4 text-xl sm:text-2xl lg:text-3xl text-center">{{ $page.article.title }}</h1>
+        <h1 class="px-4 sm:px-8 md:px-12 lg:px-16 py-4 text-xl sm:text-2xl lg:text-3xl text-center">{{ $page.article.title }}</h1>
         <!-- 投稿日 -->
-        <div class="pt-4 pb-3 text-xs text-center text-gray-600">
+        <div class="pt-6 text-xs text-center text-gray-600">
           <time :datetime="$page.article.createdAt">{{ $page.article.createdAt }}</time>
           <!-- 登校日と更新日が異なる場合は更新日も表示する -->
           <span v-if="$page.article.createdAt !== $page.article.updatedAt">
@@ -19,22 +19,22 @@
           </span>
         </div>
         <!-- カテゴリ -->
-        <div class="flex items-center justify-center py-4">
-          <div class="text-xs tracking-wider text-white bg-gray-600 rounded-full border border-gray-600 px-3 py-1">
+        <div class="flex items-center justify-center pt-3 pb-2 md:pt-6 md:pb-4">
+          <div class="text-xs tracking-wider text-white bg-gray-600 rounded-full border border-gray-600 px-2 py-0 md:px-3 md:py-1">
             {{ $page.article.category }}
           </div>
         </div>
 
         <!-- アイキャッチ -->
-        <div class="py-10">
+        <div class="py-5">
           <g-image :src="$page.article.image"/>
         </div>
 
         <!-- 本文 -->
-        <div class="px-5 sm:px-6 lg:px-8 blog-content" v-html="$page.article.content" />
+        <div class="px-4 sm:px-8 md:px-12 lg:px-24 blog-content" v-html="$page.article.content" />
 
         <!-- タグ -->
-        <div class="pt-8 text-sm tracking-wider text-center text-gray-600">
+        <div class="pt-8 text-xs tracking-wider text-center text-gray-600">
           <span v-for="tag in tags" :key="tag" v-text="`#${tag}`" class="mr-2" />
 <!--          <span v-for="tag in $page.article.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />-->
         </div>
@@ -100,18 +100,19 @@ query Post ($path: String!) {
 <style>
 /* 見出し */
 .blog-content > h2 {
-  @apply text-2xl mt-12 p-1;
+  @apply text-xl mt-12 px-1 pb-1;
   border-bottom: 1px solid #F687B3;
 }
 .blog-content > h3 {
-  @apply mt-10 pl-3 pr-1;
-  font-size: 1.2rem;
-  border-left: 4px solid #F687B3;
+  @apply text-lg mt-10 pl-2 pr-1;
+  /*font-size: 1.2rem;*/
+  border-left: 5px solid #F687B3;
 }
 
 /* テキスト */
 .blog-content > p {
-  @apply my-8 pb-1 leading-loose;
+  @apply my-8 leading-loose;
+  font-size: .96rem;
 }
 .blog-content > p > a:link, a:visited {
   @apply underline;
@@ -130,23 +131,23 @@ query Post ($path: String!) {
 }
 .blog-content > ul li {
   @apply list-disc list-outside;
-  padding-top: .15rem;
-  padding-bottom: .15rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
 }
 .blog-content > ul > li > ul  {
   @apply list-disc list-outside pl-6;
-  padding-top: .15rem;
-  padding-bottom: .15rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
 }
 .blog-content > ol > li {
   @apply list-decimal list-outside;
-  padding-top: .15rem;
-  padding-bottom: .15rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
 }
 .blog-content > ol > li > ol  {
   @apply list-decimal list-outside pl-6;
-  padding-top: .15rem;
-  padding-bottom: .15rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
 }
 
 /* 抜粋 */

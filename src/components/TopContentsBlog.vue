@@ -5,14 +5,14 @@
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
       <!-- 記事 -->
       <div v-for="{ node } in $static.blogs.edges" :key="node.id"
-        class="pt-6 pb-8 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
+        class="py-5 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
         <router-link :to="node.path">
           <!-- カテゴリ -->
           <div class="px-6 text-xs text-center text-gray-600 tracking-wider">{{ node.category }}</div>
           <!-- タイトル -->
-          <h2 class="pt-6 px-4 md:px-6 text-lg md:text-xl text-center">{{ node.title }}</h2>
+          <h2 class="pt-6 px-4 md:px-6 text-md md:text-lg text-center">{{ node.title }}</h2>
           <!-- 投稿日 -->
-          <div class="pt-5 text-xs text-center text-gray-600">
+          <div class="pt-8 text-xs text-center text-gray-600">
             <time :datetime="node.createdAt">{{ node.createdAt }}</time>
             <!-- 登校日と更新日が異なる場合は更新日も表示する -->
             <span v-if="node.createdAt !== node.updatedAt">
@@ -21,13 +21,13 @@
             </span>
           </div>
           <!-- アイキャッチ -->
-          <div class="my-8 hover-effect bg-gray-200">
+          <div class="mt-5 mb-6 hover-effect bg-gray-200">
             <img :src="node.image" class="hover-effect hover:opacity-75">
           </div>
           <!-- 説明文 -->
-          <div class="px-8 text-sm hidden md:block">{{ node.description }}</div>
+          <div class="px-8 text-xs hidden md:block">{{ node.description }}</div>
           <!-- タグ -->
-          <div class="md:pt-6 text-xs text-center text-gray-600">
+          <div class="md:pt-5 text-xs text-center text-gray-600">
             <span v-for="tag in node.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />
           </div>
         </router-link>
