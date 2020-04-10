@@ -8,9 +8,9 @@
     <template v-slot:main-contents>
       <div class="w-full mx-auto m-10 py-10 bg-white sm:w-9/12 lg:w-7/12">
         <!-- タイトル -->
-        <h1 class="px-4 sm:px-10 py-4 text-3xl text-center">{{ $page.article.title }}</h1>
+        <h1 class="px-4 lg:px-8 py-4 text-xl sm:text-2xl lg:text-3xl text-center">{{ $page.article.title }}</h1>
         <!-- 投稿日 -->
-        <div class="py-4 text-xs text-center text-gray-600">
+        <div class="pt-4 pb-3 text-xs text-center text-gray-600">
           <time :datetime="$page.article.createdAt">{{ $page.article.createdAt }}</time>
           <!-- 登校日と更新日が異なる場合は更新日も表示する -->
           <span v-if="$page.article.createdAt !== $page.article.updatedAt">
@@ -19,8 +19,8 @@
           </span>
         </div>
         <!-- カテゴリ -->
-        <div class="flex items-center justify-center pt-3 pb-4">
-          <div class="text-sm tracking-wider text-white bg-gray-600 rounded-full border border-gray-600 px-3 py-1">
+        <div class="flex items-center justify-center py-4">
+          <div class="text-xs tracking-wider text-white bg-gray-600 rounded-full border border-gray-600 px-3 py-1">
             {{ $page.article.category }}
           </div>
         </div>

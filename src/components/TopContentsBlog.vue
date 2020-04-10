@@ -5,12 +5,12 @@
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
       <!-- 記事 -->
       <div v-for="{ node } in $static.blogs.edges" :key="node.id"
-        class="pt-6 pb-8 px-2 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
+        class="pt-6 pb-8 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
         <router-link :to="node.path">
           <!-- カテゴリ -->
-          <div class="text-sm text-center text-gray-600 tracking-wider">{{ node.category }}</div>
+          <div class="px-6 text-xs text-center text-gray-600 tracking-wider">{{ node.category }}</div>
           <!-- タイトル -->
-          <h2 class="pt-6 px-4 text-xl text-center">{{ node.title }}</h2>
+          <h2 class="pt-6 px-4 md:px-6 text-lg md:text-xl text-center">{{ node.title }}</h2>
           <!-- 投稿日 -->
           <div class="pt-5 text-xs text-center text-gray-600">
             <time :datetime="node.createdAt">{{ node.createdAt }}</time>
@@ -25,9 +25,9 @@
             <img :src="node.image" class="hover-effect hover:opacity-75">
           </div>
           <!-- 説明文 -->
-          <div class="px-4 text-sm hidden md:block">{{ node.description }}</div>
+          <div class="px-8 text-sm hidden md:block">{{ node.description }}</div>
           <!-- タグ -->
-          <div class="pt-2 sm:pt-5 text-sm text-center text-gray-600">
+          <div class="md:pt-6 text-xs text-center text-gray-600">
             <span v-for="tag in node.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />
           </div>
         </router-link>
