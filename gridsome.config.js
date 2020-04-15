@@ -21,6 +21,9 @@ module.exports = {
 
   plugins: [
     {
+      // TODO: 本プラグインの複数使用（posts/photos/graphicsをわけられるか？）
+      // https://github.com/gridsome/gridsome/issues/401
+      // https://github.com/gridsome/gridsome/issues/183
       use: '@gridsome/source-filesystem',
       options: {
         path: 'static/posts/**/**/*.md',
@@ -61,9 +64,27 @@ module.exports = {
       options: {
         host: 'https://portfolio.nnamm.com',
         sitemap: 'https://portfolio.nnamm.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        policy: [
+          {
+            userAgent: '*',
+            allow: '/',
+            disallow: [
+              '/posts/p0*',
+              '/posts/g0*',
+              '/photos/b0*',
+              '/photos/g0*',
+              '/graphics/b0*',
+              '/graphics/p0*'
+            ]
+          }
+        ]
       }
     },
+    // TODO（2020.04）:
+    //  1コレクション・複数テンプレート構成にするとすべての記事がテンプレートの数だけ複製されてしまう
+    //  （おそらくGridsomeの仕様と思う）
+    //  （https://github.com/gridsome/gridsome/issues/183）
+    //  そのため不要なリンクにはdisallowを設定して対処
     {
       use: '@gridsome/plugin-sitemap',
       options: {
@@ -71,20 +92,16 @@ module.exports = {
         exclude: ['/exclude-me'],
         config: {
           '/posts/*': {
-            changefreq: 'weekly',
-            priority: 0.5
+            changefreq: 'weekly'
           },
           '/photos/*': {
-            changefreq: 'weekly',
-            priority: 0.5
+            changefreq: 'monthly'
           },
           '/graphics/*': {
-            changefreq: 'weekly',
-            priority: 0.5
+            changefreq: 'monthly'
           },
           '/about': {
-            changefreq: 'monthly',
-            priority: 0.7
+            changefreq: 'monthly'
           }
         }
       }
