@@ -1,6 +1,6 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="w-full mx-auto text my-4 lg:my-32 px-6 py-12 sm:px-8 sm:py-20 lg:px-15 xl:px-20">
+  <div class="w-full mx-auto text my-4 lg:my-32 px-6 py-12 sm:px-8 sm:py-20 lg:px-20 xl:px-24">
     <!-- メイン -->
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
       <!-- 記事 -->
@@ -11,6 +11,12 @@
           <div class="px-6 text-xs text-center text-gray-600 tracking-wider">{{ node.category }}</div>
           <!-- タイトル -->
           <h2 class="pt-6 px-4 md:px-6 text-md md:text-lg text-center">{{ node.title }}</h2>
+          <!-- アイキャッチ -->
+          <div class="mt-5 mb-6 hover-effect bg-gray-200">
+            <img :src="node.image" class="hover-effect hover:opacity-75" alt="">
+          </div>
+          <!-- 説明文 -->
+          <div class="px-8 text-xs text-gray-600">{{ node.description }}</div>
           <!-- 投稿日 -->
           <div class="pt-8 text-xs text-center text-gray-600">
             <time :datetime="node.createdAt">{{ node.createdAt }}</time>
@@ -20,16 +26,10 @@
               <time :datetime="node.updatedAt">{{ node.updatedAt }}</time>
             </span>
           </div>
-          <!-- アイキャッチ -->
-          <div class="mt-5 mb-6 hover-effect bg-gray-200">
-            <img :src="node.image" class="hover-effect hover:opacity-75">
-          </div>
-          <!-- 説明文 -->
-          <div class="px-8 text-xs hidden md:block">{{ node.description }}</div>
           <!-- タグ -->
-          <div class="md:pt-5 text-xs text-center text-gray-600">
-            <span v-for="tag in node.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />
-          </div>
+<!--          <div class="md:pt-5 text-xs text-center text-gray-600">-->
+<!--            <span v-for="tag in node.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />-->
+<!--          </div>-->
         </router-link>
       </div>
     </div>

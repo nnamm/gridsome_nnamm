@@ -111,14 +111,15 @@ query Post ($path: String!) {
 
 /* テキスト */
 .blog-content > p {
-  @apply my-8 leading-loose;
+  @apply mt-8 leading-loose;
   font-size: .96rem;
 }
 .blog-content > p > a:link, a:visited {
   @apply underline;
   text-underline-position: under;
 }
-.blog-content > p > a::after {
+.blog-content > p > a::after,
+.blog-content > ul li > a::after {
   content: url('/svg/new-window.svg');
   @apply w-6 h-6 inline-block align-middle;
   margin-left: -.1rem;
@@ -127,7 +128,7 @@ query Post ($path: String!) {
 
 /* リスト */
 .blog-content > ul, ol {
-  @apply pl-6 pr-2;
+  @apply mt-8 pl-6 pr-2;
 }
 .blog-content > ul li {
   @apply list-disc list-outside;
@@ -152,7 +153,7 @@ query Post ($path: String!) {
 
 /* 抜粋 */
 .blog-content > blockquote {
-  @apply m-6 p-8 text-sm text-gray-700 bg-gray-200 rounded;
+  @apply m-4 px-8 py-6 text-sm text-gray-700 bg-gray-200 rounded;
 }
 
 /* コードハイライト（Prism.jsベース） */
