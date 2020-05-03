@@ -1,11 +1,11 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="w-full md:w-4/5 text mx-auto my-4 lg:my-32 px-6 py-12 sm:py-20">
+  <div class="w-full md:w-5/6 lg:w-9/12 mx-auto my-4 lg:my-32 px-6 sm:px-16 py-16 md:py-12 text">
     <!-- メイン -->
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:gap-8">
       <!-- 記事 -->
       <div v-for="{ node } in $static.blogs.edges" :key="node.id"
-        class="py-4 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
+        class="py-6 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
         <router-link :to="node.path">
           <!-- カテゴリ -->
           <div class="text-xs text-center text-gray-600 tracking-wider">{{ node.category }}</div>
