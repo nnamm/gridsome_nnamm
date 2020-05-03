@@ -1,6 +1,6 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="w-full md:w-5/6 lg:w-9/12 mx-auto my-4 lg:my-32 px-6 sm:px-16 py-16 md:py-12 text">
+  <div class="w-full md:w-5/6 lg:w-10/12 mx-auto my-4 lg:my-32 px-6 sm:px-16 py-16 md:py-12 text">
     <!-- メイン -->
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:gap-8">
       <!-- 記事 -->
@@ -27,7 +27,7 @@
             </span>
           </div>
           <!-- タグ -->
-<!--          <div class="md:pt-5 text-xs text-center text-gray-600">-->
+<!--          <div class="md:pt-text-xs text-center text-gray-600">-->
 <!--            <span v-for="tag in node.tags.split(' ')" :key="tag" v-text="`#${tag}`" class="mr-2" />-->
 <!--          </div>-->
         </router-link>
