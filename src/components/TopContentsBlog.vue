@@ -1,24 +1,24 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="w-full mx-auto text my-4 lg:my-32 px-6 py-12 sm:px-8 sm:py-20 lg:px-20 xl:px-24">
+  <div class="w-full md:w-4/5 text mx-auto my-4 lg:my-32 px-6 py-12 sm:py-20">
     <!-- メイン -->
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:gap-8">
       <!-- 記事 -->
       <div v-for="{ node } in $static.blogs.edges" :key="node.id"
-        class="py-5 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
+        class="py-4 bg-white hover-effect hover:shadow-lg" style="min-height: 320px;">
         <router-link :to="node.path">
           <!-- カテゴリ -->
-          <div class="px-6 text-xs text-center text-gray-600 tracking-wider">{{ node.category }}</div>
+          <div class="text-xs text-center text-gray-600 tracking-wider">{{ node.category }}</div>
           <!-- タイトル -->
-          <h2 class="pt-6 px-4 md:px-6 text-md md:text-lg text-center">{{ node.title }}</h2>
+          <h2 class="mx-4 mt-5 md:mx-6 text-md md:text-lg text-center">{{ node.title }}</h2>
           <!-- アイキャッチ -->
-          <div class="mt-5 mb-6 hover-effect bg-gray-200">
+          <div class="mx-4 mt-6 mb-5 hover-effect bg-gray-200">
             <img :src="node.image" class="hover-effect hover:opacity-75" alt="">
           </div>
           <!-- 説明文 -->
-          <div class="px-8 text-xs text-gray-600">{{ node.description }}</div>
+          <div class="mx-8 text-xs text-gray-600">{{ node.description }}</div>
           <!-- 投稿日 -->
-          <div class="pt-8 text-xs text-center text-gray-600">
+          <div class="mt-6 text-xs text-center text-gray-600">
             <time :datetime="node.createdAt">{{ node.createdAt }}</time>
             <!-- 登校日と更新日が異なる場合は更新日も表示する -->
             <span v-if="node.createdAt !== node.updatedAt">
