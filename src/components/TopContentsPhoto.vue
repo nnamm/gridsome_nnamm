@@ -109,7 +109,7 @@ query ($page: Int) {
     edges {
       node {
         id
-        path(to:"photo")
+        path
         title
         createdAt (format: "YYYY.MM.DD")
         updatedAt (format: "YYYY.MM.DD")

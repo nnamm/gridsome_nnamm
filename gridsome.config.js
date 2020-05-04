@@ -21,9 +21,6 @@ module.exports = {
 
   plugins: [
     {
-      // TODO: 本プラグインの複数使用（posts/photos/graphicsをわけられるか？）
-      // https://github.com/gridsome/gridsome/issues/401
-      // https://github.com/gridsome/gridsome/issues/183
       use: '@gridsome/source-filesystem',
       options: {
         path: 'static/posts/**/**/*.md',
@@ -67,24 +64,11 @@ module.exports = {
         policy: [
           {
             userAgent: '*',
-            allow: '/',
-            disallow: [
-              '/posts/p0*',
-              '/posts/g0*',
-              '/photos/b0*',
-              '/photos/g0*',
-              '/graphics/b0*',
-              '/graphics/p0*'
-            ]
+            allow: '/'
           }
         ]
       }
     },
-    // TODO（2020.04）:
-    //  1コレクション・複数テンプレート構成にするとすべての記事がテンプレートの数だけ複製されてしまう
-    //  （おそらくGridsomeの仕様と思う）
-    //  （https://github.com/gridsome/gridsome/issues/183）
-    //  そのため不要なリンクにはdisallowを設定して対処
     {
       use: '@gridsome/plugin-sitemap',
       options: {
@@ -93,12 +77,6 @@ module.exports = {
         config: {
           '/posts/*': {
             changefreq: 'weekly'
-          },
-          '/photos/*': {
-            changefreq: 'monthly'
-          },
-          '/graphics/*': {
-            changefreq: 'monthly'
           },
           '/about': {
             changefreq: 'monthly'
@@ -110,22 +88,9 @@ module.exports = {
 
   templates: {
     Post: [
-      // ブログ記事用
       {
         path: '/posts/:slug',
         component: './src/templates/Post.vue'
-      },
-      // 写真作品用
-      {
-        name: 'photo',
-        path: '/photos/:slug',
-        component: './src/templates/Photo.vue'
-      },
-      // グラフィック作品用
-      {
-        name: 'graphic',
-        path: '/graphics/:slug',
-        component: './src/templates/Graphic.vue'
       }
     ]
   }
