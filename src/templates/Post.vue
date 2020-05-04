@@ -33,7 +33,6 @@
                 <time :datetime="$page.article.updatedAt">{{ $page.article.updatedAt }}</time>
               </span>
             </div>
-            <div>{{ postType }}</div>
           </div>
           <!-- アイキャッチ -->
           <div class="pt-3 pb-4">
