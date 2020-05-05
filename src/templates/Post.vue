@@ -182,12 +182,14 @@ query Post ($path: String!) {
   font-size: .96rem;
 }
 .blog-content > p a:link, a:visited,
-.blog-content > ul > li a:link, a:visited {
+.blog-content > ul > li a:link, a:visited,
+.blog-content > blockquote a:link, a:visited {
   @apply underline;
   text-underline-position: under;
 }
 .blog-content > p a::after,
-.blog-content > ul > li a::after {
+.blog-content > ul > li a::after,
+.blog-content > blockquote a::after {
   content: url('/svg/new-window.svg');
   @apply w-6 h-6 inline-block align-middle;
   margin-left: -.1rem;
