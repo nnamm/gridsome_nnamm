@@ -57,4 +57,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     name: 'twitter:site',
     content: '@nnammg'
   })
+  // Search Console用
+  head.meta.push({
+    name: 'google-site-verification',
+    content: '3imfnbuFT-u71lkwikCpydyZl3XjMEFGDWyVxOGLHOg'
+  })
 }
