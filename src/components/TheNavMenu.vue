@@ -5,7 +5,7 @@
         {{ $static.metadata.siteName }}
       </g-link>
     </div>
-    <div class="m-2 px-4 py-2 lg:py-4">
+    <div class="m-2 px-4 py-2 lg:pt-5 lg:pb-4">
       <!-- not mobile -->
       <nav class="ml-10 hidden lg:block">
         <g-link v-for="item in g_link_items" :key="item.title"

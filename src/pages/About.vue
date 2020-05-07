@@ -21,7 +21,8 @@ export default {
     Profile,
   },
   metaInfo: {
-    title: 'About Me'
+    title: 'About Me',
+    titleTemplate: '%s | nnamm.work'
   }
 }
 </script>

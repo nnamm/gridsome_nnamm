@@ -6,9 +6,9 @@ class TailwindExtractor {
 }
 
 module.exports = {
-  siteName: 'nnamm works',
+  siteName: 'nnamm.work',
   siteUrl: 'https://portfolio.nnamm.com/',
-  titleTemplate: '%s | nnamm works',
+  titleTemplate: '%s',
 
   transformers: {
     remark: {

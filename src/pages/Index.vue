@@ -46,22 +46,17 @@ export default {
     // TopMaterial,
     TopPhoto
   },
-  // metaInfo: {
-  //   title: 'Home'
-  // },
-  metaInfo: function () {
-    return {
-      title: 'Home',
-      meta: [
-        { name: 'description', content: '空気感フォトグラファーのポートフォリオサイトです。Gridsomeで作りました。写真、グラフィック、ブログなどの作品を掲載しています。' },
-        { property: 'og:title', content: 'nnamm works' },
-        { property: 'og:type', content: 'Website' },
-        { property: 'og:url', content: 'https://portfolio.nnamm.com' },
-        { property: 'og:image', content: 'https://portfolio.nnamm.com/_gallery/default-ogp.jpg' },
-        { property: 'og:site_name', content: 'nnamm works' },
-        { property: 'og:description', content: '空気感フォトグラファーのポートフォリオサイトです。Gridsomeで作りました。写真、グラフィック、ブログなどの作品を掲載しています。' }
-      ]
-    }
+  metaInfo: {
+    title: 'nnamm.work : portfolio note',
+    meta: [
+      { name: 'description', content: '空気感フォトグラファーのポートフォリオサイトです。Gridsomeで作りました。写真、グラフィック、ブログなどの作品を掲載しています。' },
+      { property: 'og:title', content: 'nnamm.work : portfolio note' },
+      { property: 'og:type', content: 'Website' },
+      { property: 'og:url', content: 'https://portfolio.nnamm.com' },
+      { property: 'og:image', content: 'https://portfolio.nnamm.com/_gallery/default-ogp.jpg' },
+      { property: 'og:site_name', content: 'nnamm.work : portfolio note' },
+      { property: 'og:description', content: '空気感フォトグラファーのポートフォリオサイトです。Gridsomeで作りました。写真、グラフィック、ブログなどの作品を掲載しています。' }
+    ]
   },
   data: () => {
     return {

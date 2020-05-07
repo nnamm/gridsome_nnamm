@@ -115,13 +115,14 @@ export default {
   metaInfo: function () {
     return {
       title: this.$page.article.title,
+      titleTemplate: '%s | nnamm.work',
       meta: [
         { name: 'description', content: this.$page.article.description },
         { property: 'og:title', content: this.$page.article.title },
         { property: 'og:type', content: 'Website' },
         { property: 'og:url', content: 'https://portfolio.nnamm.com/posts/' + this.$page.article.slug + '/' },
         { property: 'og:image', content: 'https://portfolio.nnamm.com' + this.$page.article.image },
-        { property: 'og:site_name', content: 'nnamm works' },
+        { property: 'og:site_name', content: 'nnamm.work' },
         { property: 'og:description', content: this.$page.article.description }
       ]
     }
@@ -131,7 +132,7 @@ export default {
       profile: {
         img: require('@/assets/images/profile.jpg'),
         nameJa: '花村貴史',
-        desc: '運営者近影'
+        desc: '花村貴史のアイコン画像'
       }
     }
   },
