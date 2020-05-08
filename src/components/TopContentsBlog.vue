@@ -1,6 +1,6 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="w-full md:w-5/6 lg:w-10/12 xl:w-9/12 mx-auto my-4 lg:my-32 px-6 xl:px-10 py-16 md:py-12 text">
+  <div class="w-full md:w-5/6 lg:w-10/12 xl:w-9/12 mx-auto my-4 lg:my-32 px-6 xl:px-10 py-16 md:py-12 text max-w-screen-xl">
     <!-- メイン -->
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:gap-8">
       <!-- 記事 -->

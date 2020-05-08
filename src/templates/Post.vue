@@ -7,7 +7,7 @@
 
     <template v-slot:main-contents>
       <!-- ■■■■■  投稿タイプ：Blog  ■■■■■ -->
-      <div v-if="postType === 'b'" class="w-full mx-auto m-10 py-16 bg-white sm:w-11/12">
+      <div v-if="postType === 'b'" class="w-full sm:w-11/12 mx-auto m-10 py-16 bg-white max-w-screen-2xl">
         <div class="w-full sm:w-4/5 lg:w-3/5 xl:w-6/12 mx-auto">
           <!-- タイトル -->
           <h1 class="mx-3 sm:mx-2 text-xl sm:text-2xl lg:text-3xl">{{ $page.article.title }}</h1>
@@ -49,7 +49,7 @@
       </div>
 
       <!-- ■■■■■  投稿タイプ：Graphic  ■■■■■ -->
-      <div v-else-if="postType === 'g'" class="w-full mx-auto m-10 bg-white lg:w-11/12">
+      <div v-else-if="postType === 'g'" class="w-full lg:w-11/12 mx-auto m-10 bg-white max-w-screen-xl">
         <!-- タイトル部 -->
         <div class="relative mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0">
           <div class="absolute w-full z-10" style="top: 30%;">
@@ -74,7 +74,7 @@
       </div>
 
       <!-- ■■■■■  投稿タイプ：Photo  ■■■■■ -->
-      <div v-else class="w-full mx-auto m-10 bg-white lg:w-11/12">
+      <div v-else class="w-full lg:w-11/12 mx-auto m-10 bg-white max-w-screen-xl">
         <!-- タイトル部 -->
         <div class="relative w-11/12 mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0 rounded-bl-lg">
           <div class="absolute pl-4 lg:pl-8 z-10" style="top: 20%;">
