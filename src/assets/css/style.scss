@@ -1,6 +1,6 @@
 $main-background: #f8f8f8;
 $font-sans: "YuKyo_Yoko-Medium", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, "Helvetica Neue", Arial, sans-serif;
-$font-mono: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+//$font-mono: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 
 // サイト全体設定
 body {
@@ -11,11 +11,11 @@ body {
 
 // フォント設定
 .nam__sans {
-  font-family: $font-mono;
+  font-family: $font-sans;
 }
-.nam__mono {
-  font-family: $font-mono;
-}
+//.nam__mono {
+//  font-family: $font-mono;
+//}
 
 // TODO: SCSS的にスマートに組みたい
 // Photo用md, Graphic用mdのための設定

@@ -41,10 +41,11 @@ module.exports = {
       options: {
         content: [
           './src/assets/**/*.css',
+          './src/assets/**/*.scss',
           './src/**/*.vue',
           './src/**/*.js',
           './src/**/*.md',
-          'node_modules/prismjs/**/*.js'
+          './node_modules/prismjs/**/*.js'
         ],
         extractor: TailwindExtractor,
         extensions: ['vue', 'js', 'md']
