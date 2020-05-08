@@ -1,6 +1,6 @@
 <template>
   <!-- フッター最下部設置用の設定 -->
-  <div class="min-h-full relative box-border pb-40 lg:pb-20 base-text">
+  <div class="min-h-full relative box-border pb-20 base-text">
 
     <!-- ヘッダー -->
     <header>

@@ -1,6 +1,6 @@
 <template>
   <!-- コンテンツ全体 -->
-  <div class="container mx-auto my-4 lg:my-32 px-8 py-12 sm:px-12 sm:py-16 lg:px-24 max-w-screen-xl">
+  <div class="container mx-auto my-8 lg:my-32 px-8 xl:px-40 py-16 md:py-12">
     <!-- メイン -->
     <div class="grid grid-cols-2 gap-6 lg:grid-rows-3 lg:grid-cols-4 grid-flow-row">
       <div class="row-span-1 col-span-1 lg:row-span-2 lg:col-span-2">

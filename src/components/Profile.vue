@@ -1,7 +1,6 @@
 <template>
-  <div class="container mx-auto my-0 sm:my-20 px-8 py-20 sm:py-4 bg-white
-              lg:flex lg:w-3/5 lg:my-40 lg:px-10 lg:py-8
-              lg:border lg:border-gray-300 lg:rounded-lg max-w-screen-lg">
+  <div class="w-full mx-auto my-0 sm:my-20 px-8 py-20 sm:py-4 bg-white max-w-screen-lg
+              lg:flex lg:w-3/5 lg:my-40 lg:px-10 lg:py-8 lg:border lg:border-gray-300 lg:rounded-lg">
     <img :src="profile.img" :alt="profile.desc"
          class="w-48 h-48 mx-auto my-4 rounded-full lg:my-auto lg:mr-10">
     <div class="lg:mx-4 my-4">
