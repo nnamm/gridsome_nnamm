@@ -1,5 +1,6 @@
 <template>
   <!-- フッター最下部設置用の設定 -->
+  <!-- TODO: 画面の最下部に固定するよう調整する -->
   <div class="min-h-full relative box-border pb-20 base-text">
 
     <!-- ヘッダー -->
