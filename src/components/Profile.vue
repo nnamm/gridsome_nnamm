@@ -4,16 +4,16 @@
     <img :src="profile.img" :alt="profile.desc"
          class="w-48 h-48 mx-auto my-4 rounded-full lg:my-auto lg:mr-10">
     <div class="lg:mx-4 my-4">
-      <p class="text-pink-500 text-sm text-center pb-4">
+      <p class="text-pink-600 text-sm text-center pb-3">
         {{ profile.title }}
       </p>
-      <p class="text-gray-800 text-2xl text-center font-medium py-3">
-        {{ profile.nameJa }}<span class="text-base">{{ profile.nickname }}</span>
+      <p class="text-2xl text-center font-medium pt-3 pb-2">
+        {{ profile.nameJa }}
       </p>
-      <p class="text-gray-800 text-xs text-center py-1">
+      <p class="text-xs text-center py-1">
         {{ profile.nameEn }}
       </p>
-      <p class="text-gray-800 text-left px-2 lg:px-0 py-6 leading-loose" style="font-size: .96rem">
+      <p class="text-left px-2 lg:px-0 py-6 leading-loose" style="font-size: .94rem">
         {{ profile.intro.t1 }}{{ profile.intro.t2 }}<br>{{ profile.intro.t3 }}{{ $static.metadata.siteName }}{{ profile.intro.t4 }}
       </p>
       <!-- Social -->
@@ -38,7 +38,7 @@ export default {
         title: 'Software Engineer & Photographer',
         nameJa: '花村貴史',
         nameEn: 'Takashi Q. Hanamura',
-        nickname: '（なむ）',
+        // nickname: '（なむ）',
         intro: {
           t1: 'Web開発をしながら、撮られることに慣れてない方の笑顔やステキな空気感をそっとすくい撮ってます。',
           t2: '横浜育ち38年、脱サラ信州移住2年半を経て、2018年春から関西在住。翌年秋から夫婦生活スタート。関西に来てよかったことは京都が近くなったこと、めっちゃ嬉しい。',

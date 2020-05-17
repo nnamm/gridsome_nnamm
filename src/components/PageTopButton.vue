@@ -44,7 +44,6 @@ export default {
 .to-top-button-back {
   @apply bg-gray-200 rounded-full;
 }
-
 .fade-enter-active {
   transition: opacity 1s;
 }

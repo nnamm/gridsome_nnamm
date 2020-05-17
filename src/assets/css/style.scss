@@ -1,6 +1,6 @@
 $main-background: #f8f8f8;
 $font-sans: "YuKyo_Yoko-Medium", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, "Helvetica Neue", Arial, sans-serif;
-//$font-mono: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+$font-mono: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 
 // サイト全体設定
 body {
@@ -9,15 +9,6 @@ body {
   min-width: 320px;
 }
 
-// フォント設定
-.nam__sans {
-  font-family: $font-sans;
-}
-//.nam__mono {
-//  font-family: $font-mono;
-//}
-
-// TODO: SCSS的にスマートに組みたい
 // Photo用md, Graphic用mdのための設定
 // Buildするとtailwindcssが当たらない（ことがある）ため独自にクラスを作る
 // トップマージン
@@ -45,35 +36,27 @@ body {
   }
 }
 
-// 1枚の横写真を中央縮小配置
+// 1枚の写真（横）を中央縮小配置
 .nam__wc-1in1-x-center {
   padding: 0 3rem;
-}
-@media (min-width: 640px) {
-  .nam__wc-1in1-x-center {
+  @media (min-width: 640px) {
     padding: 0 5rem;
   }
-}
-@media (min-width: 768px) {
-  .nam__wc-1in1-x-center {
+  @media (min-width: 768px) {
     padding: 0 6rem;
   }
 }
 
-// 1枚の縦写真を中央縮小配置
+// 1枚の写真（縦）を中央縮小配置
 .nam__wc-1in1-y-center {
   height: 24rem;
   width: auto;
   margin-right: auto;
   margin-left: auto;
-}
-@media (min-width: 640px) {
-  .nam__wc-1in1-y-center {
+  @media (min-width: 640px) {
     height: 36rem;
   }
-}
-@media (min-width: 768px) {
-  .nam__wc-1in1-y-center {
+  @media (min-width: 768px) {
     height: 60rem;
   }
 }
