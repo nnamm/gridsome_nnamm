@@ -9,10 +9,14 @@
       <!-- ■■■■■  投稿タイプ：Blog  ■■■■■ -->
       <div v-if="postType === 'b'" class="w-full sm:w-11/12 mx-auto m-10 py-16 bg-white max-w-screen-2xl">
         <div class="w-full sm:w-4/5 lg:w-3/5 xl:w-6/12 mx-auto">
+          <!-- アイキャッチ -->
+          <div>
+            <g-image :src="$page.article.image"/>
+          </div>
           <!-- タイトル -->
-          <h1 class="mx-3 sm:mx-1 text-2xl sm:text-3xl lg:text-4xl">{{ $page.article.title }}</h1>
+          <h1 class="mx-3 sm:mx-1 mt-8 sm:mt-10 text-2xl sm:text-3xl lg:text-4xl">{{ $page.article.title }}</h1>
           <!-- メタデータ -->
-          <div class="flex items-center ml-4 sm:ml-2 mt-10 divide-x divide-gray-400">
+          <div class="flex items-center ml-4 sm:ml-2 mt-4 divide-x divide-gray-400">
             <!-- 投稿者 -->
             <div class="flex-initial pr-3">
               <img :src="profile.img" :alt="profile.desc" class="w-8 h-8 rounded-full float-left">
@@ -34,12 +38,8 @@
               </span>
             </div>
           </div>
-          <!-- アイキャッチ -->
-          <div class="my-4">
-            <g-image :src="$page.article.image"/>
-          </div>
           <!-- 本文 -->
-          <div class="mx-3 sm:mx-1 blog-content" v-html="$page.article.content" />
+          <div class="mx-3 sm:mx-1 mt-10 blog-content" v-html="$page.article.content" />
           <!-- タグ -->
           <div class="mt-8 text-xs tracking-wider text-center text-gray-600">
             <span v-for="tag in tags" :key="tag" v-text="`#${tag}`" class="mr-2" />
@@ -169,23 +169,28 @@ query Post ($path: String!) {
 
 /* 投稿タイプ：Blog */
 $b-font-base-size: .92rem;
-$b-elements-base-space: 1.5rem;
+$b-elements-base-space: 1.75rem;
 $b-space: .15rem;
 
 .blog-content {
   > h2 {
-    @apply text-xl mt-16 px-1 pb-1 font-bold;
+    @apply text-xl mt-16 pr-1 pb-1 font-bold;
     border-bottom: 1px solid #A0AEC0;
   }
 
   > h3 {
-    @apply text-lg mt-12 px-1 pb-1 font-bold;
+    @apply text-lg mt-12 pr-1 pb-1 font-bold;
   }
 
   > p {
     margin-top: $b-elements-base-space;
     font-size: $b-font-base-size;
     line-height: 1.75rem;
+
+    code {
+      @apply px-2 py-1 bg-gray-200;
+      font-family: $font-sans;
+    }
   }
 
   > p, ul, ol, blockquote {
@@ -258,11 +263,11 @@ $b-space: .15rem;
   }
 
   > blockquote {
-    @apply m-4 px-8 py-6 text-sm text-gray-700 bg-gray-200 rounded;
+    @apply mx-4 my-6 px-8 py-6 text-sm text-gray-700 bg-gray-200 rounded;
   }
 
   > pre {
-    @apply my-6 p-6 leading-snug;
+    @apply my-8 p-6 leading-snug;
 
     code {
       font-family: $font-mono;
@@ -272,8 +277,9 @@ $b-space: .15rem;
 
   > table {
     @apply mx-auto table-auto border-collapse border border-gray-400;
-    margin-top: $b-elements-base-space;
-    font-size: $b-font-base-size - 0.04rem;
+    margin-top: $b-elements-base-space + .25rem;
+    margin-bottom: $b-elements-base-space + .25rem;
+    font-size: $b-font-base-size - 0.08rem;
 
     th {
       @apply px-4 py-1 border border-gray-400 bg-gray-200 font-normal;
