@@ -174,12 +174,12 @@ $b-space: .15rem;
 
 .blog-content {
   > h2 {
-    @apply text-xl mt-16 pr-1 pb-1 font-bold;
+    @apply text-xl mt-16 px-1 pb-1 font-bold;
     border-bottom: 1px solid #A0AEC0;
   }
 
   > h3 {
-    @apply text-lg mt-12 pr-1 pb-1 font-bold;
+    @apply text-lg mt-12 px-1 pb-1 font-bold;
   }
 
   > p {
