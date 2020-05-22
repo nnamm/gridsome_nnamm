@@ -18,7 +18,7 @@ jobs:
         node-version: '12.16'
     - run: yarn install
     - run: yarn build
-        
+
     - name: Display-Output-Files
       run: ls dist
 
@@ -29,4 +29,3 @@ jobs:
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist/
-        git-ftp-args: --remote-root ${{ secrets.FTP_REMOTE_ROOT }}
