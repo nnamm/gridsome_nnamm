@@ -120,8 +120,8 @@ export default {
         { name: 'description', content: this.$page.article.description },
         { property: 'og:title', content: this.$page.article.title },
         { property: 'og:type', content: 'Website' },
-        { property: 'og:url', content: 'https://portfolio.nnamm.com/posts/' + this.$page.article.slug + '/' },
-        { property: 'og:image', content: 'https://portfolio.nnamm.com' + this.$page.article.image },
+        { property: 'og:url', content: 'https://nnamm.work/posts/' + this.$page.article.slug + '/' },
+        { property: 'og:image', content: 'https://nnamm.work' + this.$page.article.image },
         { property: 'og:site_name', content: 'nnamm.work' },
         { property: 'og:description', content: this.$page.article.description }
       ]

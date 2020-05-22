@@ -52,8 +52,8 @@ export default {
       { name: 'description', content: '空気感フォトグラファーのポートフォリオサイトです。Gridsomeで作りました。写真、グラフィック、ブログなどの作品を掲載しています。' },
       { property: 'og:title', content: 'nnamm.work : portfolio note' },
       { property: 'og:type', content: 'Website' },
-      { property: 'og:url', content: 'https://portfolio.nnamm.com' },
-      { property: 'og:image', content: 'https://portfolio.nnamm.com/il/default-ogp.jpg' },
+      { property: 'og:url', content: 'https://nnamm.work' },
+      { property: 'og:image', content: 'https://nnamm.work/il/default-ogp.jpg' },
       { property: 'og:site_name', content: 'nnamm.work : portfolio note' },
       { property: 'og:description', content: '空気感フォトグラファーのポートフォリオサイトです。Gridsomeで作りました。写真、グラフィック、ブログなどの作品を掲載しています。' }
     ]

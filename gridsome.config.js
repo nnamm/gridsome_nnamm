@@ -7,7 +7,7 @@ class TailwindExtractor {
 
 module.exports = {
   siteName: 'nnamm.work',
-  siteUrl: 'https://portfolio.nnamm.com/',
+  siteUrl: 'https://nnamm.work/',
   titleTemplate: '%s',
 
   transformers: {
@@ -60,8 +60,8 @@ module.exports = {
     {
       use: 'gridsome-plugin-robots',
       options: {
-        host: 'https://portfolio.nnamm.com',
-        sitemap: 'https://portfolio.nnamm.com/sitemap.xml',
+        host: 'https://nnamm.work',
+        sitemap: 'https://nnamm.work/sitemap.xml',
         policy: [
           {
             userAgent: '*',
