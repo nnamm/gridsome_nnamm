@@ -1,4 +1,4 @@
-name: Gridsome build & deplpy
+name: Gridsome build & deploy
 
 on:
   push:
