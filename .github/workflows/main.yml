@@ -17,7 +17,7 @@ jobs:
       with:
         node-version: '12.16'
     - run: yarn install
-    - run: gridsome build
+    - run: yarn build
         
     - name: Display-Output-Files
       run: ls
