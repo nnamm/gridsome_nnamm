@@ -14,7 +14,7 @@
             <g-image :src="$page.article.image"/>
           </div>
           <!-- タイトル -->
-          <h1 class="mx-3 sm:mx-1 mt-8 sm:mt-10 text-2xl sm:text-3xl lg:text-4xl">{{ $page.article.title }}</h1>
+          <h1 class="mx-3 sm:mx-1 mt-8 sm:mt-10 text-2xl sm:text-3xl lg:text-4xl title">{{ $page.article.title }}</h1>
           <!-- メタデータ -->
           <div class="flex items-center ml-4 sm:ml-2 mt-4 divide-x divide-gray-400">
             <!-- 投稿者 -->
@@ -171,6 +171,12 @@ query Post ($path: String!) {
 $b-font-base-size: .92rem;
 $b-elements-base-space: 1.75rem;
 $b-space: .15rem;
+
+.title {
+  color: transparent;
+  background: linear-gradient(45deg, #fe5196, #f77062, #e14fad);
+  -webkit-background-clip: text;
+}
 
 .blog-content {
   > h2 {
