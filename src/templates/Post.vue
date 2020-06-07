@@ -185,7 +185,7 @@ $b-space: .15rem;
   }
 
   > h3 {
-    @apply text-lg mt-12 px-1 pb-1 font-bold;
+    @apply text-lg mt-12 px-0 pb-1 font-bold;
   }
 
   > p {
