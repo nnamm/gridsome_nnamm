@@ -14,7 +14,7 @@
         {{ profile.nameEn }}
       </p>
       <p class="text-left px-2 lg:px-0 py-6 leading-loose" style="font-size: .94rem">
-        {{ profile.intro.t1 }}{{ profile.intro.t2 }}<br>{{ profile.intro.t3 }}{{ $static.metadata.siteName }}{{ profile.intro.t4 }}
+        {{ profile.intro.t1 }}<br>{{ profile.intro.t2 }}
       </p>
       <!-- Social -->
       <div class="flex flex-wrap justify-center text-center pt-2 px-4 lg:px-0">
@@ -41,9 +41,7 @@ export default {
         // nickname: '（なむ）',
         intro: {
           t1: 'Web開発をしながら、撮られることに慣れてない方の笑顔やステキな空気感をそっとすくい撮ってます。',
-          t2: '横浜育ち38年、脱サラ信州移住2年半を経て、2018年春から関西在住。翌年秋から夫婦生活スタート。関西に来てよかったことは京都が近くなったこと、めっちゃ嬉しい。',
-          t3: 'そんな僕のポートフォリオサイト「',
-          t4: '」をよろしくお願いします。'
+          t2: '横浜育ち38年、脱サラ信州移住2年半を経て、2018年春から関西在住。翌年秋から夫婦生活スタート。関西に来てよかったことは京都が近くなったこと。',
         },
         desc: '花村貴史のアイコン画像'
       },
