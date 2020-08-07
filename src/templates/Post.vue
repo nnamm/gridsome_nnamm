@@ -168,7 +168,7 @@ query Post ($path: String!) {
 @import "src/assets/css/style.scss";
 
 /* 投稿タイプ：Blog */
-$b-font-base-size: .92rem;
+$b-font-base-size: .94rem;
 $b-elements-base-space: 1.75rem;
 $b-space: .15rem;
 
