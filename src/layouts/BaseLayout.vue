@@ -47,6 +47,6 @@ export default {
   @apply leading-relaxed;
   @apply subpixel-antialiased;
   @apply break-words;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 }
 </style>

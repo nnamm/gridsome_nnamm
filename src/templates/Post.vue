@@ -7,12 +7,12 @@
 
     <template v-slot:main-contents>
       <!-- ■■■■■  投稿タイプ：Blog  ■■■■■ -->
-      <div v-if="postType === 'b'" class="w-full sm:w-11/12 mx-auto m-10 py-16 bg-white max-w-screen-2xl">
+      <div v-if="postType === 'b'" class="w-full sm:w-11/12 mx-auto m-10 pb-16 bg-white max-w-screen-2xl">
+        <!-- アイキャッチ -->
+        <div class="w-full xl:w-8/12 mx-auto">
+          <g-image :src="$page.article.image"/>
+        </div>
         <div class="w-full sm:w-4/5 lg:w-3/5 xl:w-6/12 mx-auto">
-          <!-- アイキャッチ -->
-          <div>
-            <g-image :src="$page.article.image"/>
-          </div>
           <!-- タイトル -->
           <h1 class="mx-3 sm:mx-1 mt-8 sm:mt-10 text-2xl sm:text-3xl lg:text-4xl title">{{ $page.article.title }}</h1>
           <!-- メタデータ -->
@@ -39,7 +39,7 @@
             </div>
           </div>
           <!-- 本文 -->
-          <div class="mx-3 sm:mx-1 mt-10 blog-content" v-html="$page.article.content" />
+          <div class="mx-4 sm:mx-1 mt-10 blog-content" v-html="$page.article.content" />
           <!-- タグ -->
           <div class="mt-8 text-xs tracking-wider text-center text-gray-600">
             <span v-for="tag in tags" :key="tag" v-text="`#${tag}`" class="mr-2" />
@@ -50,7 +50,7 @@
 
       <!-- ■■■■■  投稿タイプ：Graphic  ■■■■■ -->
       <div v-else-if="postType === 'g'" class="w-full lg:w-11/12 mx-auto m-10 bg-white max-w-screen-xl">
-        <!-- タイトル部 -->
+        <!-- タイトル -->
         <div class="relative mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0">
           <div class="absolute w-full z-10" style="top: 30%;">
             <!-- カテゴリ -->
@@ -75,7 +75,7 @@
 
       <!-- ■■■■■  投稿タイプ：Photo  ■■■■■ -->
       <div v-else class="w-full lg:w-11/12 mx-auto m-10 bg-white max-w-screen-xl">
-        <!-- タイトル部 -->
+        <!-- タイトル -->
         <div class="relative w-11/12 mt-0 mb-10 md:mt-4 md:mb-20 lg:mt-10 mr-0 ml-auto bg-black z-0 rounded-bl-lg">
           <div class="absolute pl-4 lg:pl-8 z-10" style="top: 20%;">
             <!-- カテゴリ -->
@@ -168,9 +168,10 @@ query Post ($path: String!) {
 @import "src/assets/css/style.scss";
 
 /* 投稿タイプ：Blog */
-$b-font-base-size: .94rem;
+$b-font-base-size: 1rem;
 $b-elements-base-space: 1.75rem;
 $b-space: .15rem;
+$b-underline: #A0AEC0;
 
 .title {
   color: transparent;
@@ -180,16 +181,17 @@ $b-space: .15rem;
 
 .blog-content {
   > h2 {
-    @apply text-xl mt-16 px-1 pb-1 font-bold;
-    border-bottom: 1px solid #A0AEC0;
+    @apply text-xl mt-16 pb-1 font-bold;
+    border-bottom: 1px solid $b-underline;
   }
 
   > h3 {
-    @apply text-lg mt-12 px-0 pb-1 font-bold;
+    @apply text-lg mt-12 pb-1 font-bold;
+    border-bottom: 1px dotted $b-underline;
   }
 
   > p {
-    margin-top: $b-elements-base-space;
+    margin-top: $b-elements-base-space * 0.75;
     font-size: $b-font-base-size;
     line-height: 1.75rem;
 

@@ -1,6 +1,7 @@
 $main-background: #f8f8f8;
-$font-sans: "YuKyo_Yoko-Medium", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, "Helvetica Neue", Arial, sans-serif;
-$font-mono: "SourceHanCodeJP-Normal", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+$font-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, "Helvetica Neue", Arial, sans-serif;
+$font-serif: "Hiragino Mincho ProN", "YuKyo_Yoko-Medium", "BIZ UDPMincho", "Yu Mincho", serif;
+$font-mono: "SourceHanCodeJP-Light", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 
 // サイト全体設定
 body {
@@ -9,7 +10,7 @@ body {
   min-width: 320px;
 }
 
-// Photo用md, Graphic用mdのための設定
+// Photo用md, Graphic用設定
 // Buildするとtailwindcssが当たらない（ことがある）ため独自にクラスを作る
 // トップマージン
 .nam__wc-margin-top {
