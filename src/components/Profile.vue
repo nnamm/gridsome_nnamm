@@ -4,7 +4,7 @@
     <img :src="profile.img" :alt="profile.desc"
          class="w-48 h-48 mx-auto my-4 rounded-full lg:my-auto lg:mr-10">
     <div class="lg:mx-4 my-4">
-      <p class="text-pink-600 text-sm text-center pb-3">
+      <p class="text-pink-500 text-sm text-center pb-3">
         {{ profile.title }}
       </p>
       <p class="text-2xl text-center font-medium pt-3 pb-2">

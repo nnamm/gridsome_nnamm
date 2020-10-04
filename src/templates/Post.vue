@@ -39,7 +39,7 @@
             </div>
           </div>
           <!-- 本文 -->
-          <div class="mx-4 sm:mx-1 mt-10 blog-content" v-html="$page.article.content" />
+          <div class="mx-3 sm:mx-1 mt-10 blog-content" v-html="$page.article.content" />
           <!-- タグ -->
           <div class="mt-8 text-xs tracking-wider text-center text-gray-600">
             <span v-for="tag in tags" :key="tag" v-text="`#${tag}`" class="mr-2" />
@@ -169,6 +169,7 @@ query Post ($path: String!) {
 
 /* 投稿タイプ：Blog */
 $b-font-base-size: 1rem;
+$b-font-inner-size: $b-font-base-size * .8;
 $b-elements-base-space: 1.75rem;
 $b-space: .15rem;
 $b-underline: #A0AEC0;
@@ -177,6 +178,7 @@ $b-underline: #A0AEC0;
   color: transparent;
   background: linear-gradient(45deg, #fe5196, #f77062, #e14fad);
   -webkit-background-clip: text;
+  @apply leading-normal;
 }
 
 .blog-content {
@@ -191,7 +193,7 @@ $b-underline: #A0AEC0;
   }
 
   > p {
-    margin-top: $b-elements-base-space * 0.75;
+    margin-top: $b-elements-base-space * .8;
     font-size: $b-font-base-size;
     line-height: 1.75rem;
 
@@ -203,17 +205,16 @@ $b-underline: #A0AEC0;
 
   > p, ul, ol, blockquote {
     a:link, a:visited {
-      @apply text-pink-600;
+      @apply text-pink-500;
     }
     a:hover {
-      @apply text-pink-500;
+      @apply text-pink-400;
     }
   }
 
   > ul {
-    @apply py-6 pl-10 pr-2 bg-gray-100;
+    @apply pb-4 pl-6 pr-2;
     margin-top: $b-elements-base-space;
-    font-size: $b-font-base-size;
 
     li, p {
       @apply list-outside;
@@ -222,7 +223,7 @@ $b-underline: #A0AEC0;
       padding-bottom: $b-space;
 
       ul {
-        @apply pl-6;
+        @apply pl-8;
 
         li {
           @apply list-outside;
@@ -235,9 +236,8 @@ $b-underline: #A0AEC0;
   }
 
   > ol {
-    @apply py-6 pl-10 pr-2 bg-gray-100;
+    @apply pb-4 pl-6 pr-2;
     margin-top: $b-elements-base-space;
-    font-size: $b-font-base-size;
     counter-reset: section;
 
     li, p {
@@ -247,7 +247,7 @@ $b-underline: #A0AEC0;
       padding-bottom: $b-space;
 
       ol {
-        @apply pl-6;
+        @apply pl-8;
 
         li {
           @apply list-outside;
@@ -258,7 +258,7 @@ $b-underline: #A0AEC0;
       }
 
       ul {
-        @apply pl-6;
+        @apply pl-8;
 
         li {
           @apply list-outside;
@@ -271,15 +271,16 @@ $b-underline: #A0AEC0;
   }
 
   > blockquote {
-    @apply mx-4 my-6 px-8 py-6 text-sm text-gray-700 bg-gray-200 rounded;
+    @apply mx-4 my-8 p-6 text-gray-700 bg-gray-200 rounded;
+    font-size: $b-font-inner-size;
   }
 
   > pre {
-    @apply my-8 p-6 leading-snug;
+    @apply my-8 p-6;
+    font-size: $b-font-inner-size;
 
     code {
       font-family: $font-mono;
-      font-size: 0.8rem;
     }
   }
 
@@ -287,7 +288,7 @@ $b-underline: #A0AEC0;
     @apply mx-auto table-auto border-collapse border border-gray-400;
     margin-top: $b-elements-base-space + .25rem;
     margin-bottom: $b-elements-base-space + .25rem;
-    font-size: $b-font-base-size - 0.08rem;
+    font-size: $b-font-inner-size;
 
     th {
       @apply px-4 py-1 border border-gray-400 bg-gray-200 font-normal;
@@ -298,7 +299,7 @@ $b-underline: #A0AEC0;
     }
 
     td {
-      @apply px-4 py-1 border border-gray-400;
+      @apply px-4 py-1 border border-gray-400 break-all;
     }
   }
 }
